@@ -1,12 +1,8 @@
 import { Searchbar } from 'react-native-paper';
-import { StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 import { PlanetInfoCard } from '../components/planet-info-card.component';
 import { Spacer } from '../../../components/spacer/spacer.component';
-
-const SafeArea = styled.SafeAreaView`
-  ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
-`;
+import { SafeArea } from '../../../components/utils/safe-area.component';
 
 const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};

@@ -1,7 +1,8 @@
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ThemeProvider } from 'styled-components/native';
-import { theme } from './src/infrastructure/theme';
-import { PlanetsScreen } from './src/features/planets/screens/planets.screen';
+import { Text } from 'react-native';
 import {
   useFonts as useAudiowide,
   Audiowide_400Regular,
@@ -10,6 +11,43 @@ import {
   useFonts as useQuestrial,
   Questrial_400Regular,
 } from '@expo-google-fonts/questrial';
+import { Ionicons } from '@expo/vector-icons';
+import { theme } from './src/infrastructure/theme';
+import { SafeArea } from './src/components/utils/safe-area.component';
+import { PlanetsScreen } from './src/features/planets/screens/planets.screen';
+
+const Tab = createBottomTabNavigator();
+const { Navigator, Screen } = Tab;
+
+const TAB_ICON = {
+  Apod: 'md-image',
+  Planets: 'md-planet',
+  Settings: 'md-settings',
+};
+
+const Apod = () => (
+  <SafeArea>
+    <Text>Apod</Text>
+  </SafeArea>
+);
+const Settings = () => (
+  <SafeArea>
+    <Text>Settings</Text>
+  </SafeArea>
+);
+
+const createScreenOptions = ({ route }) => {
+  const iconName = TAB_ICON[route.name];
+  return {
+    tabBarIcon: ({ size, color }) => (
+      <Ionicons name={iconName} size={size} color={color} />
+    ),
+    headerShown: false,
+    tabBarActiveTintColor: '#660094',
+    tabBarInactiveTintColor: 'gray',
+    tabBarShowLabel: false,
+  };
+};
 
 export default function App() {
   const [audiowideLoaded] = useAudiowide({ Audiowide_400Regular });
@@ -19,7 +57,13 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <PlanetsScreen />
+        <NavigationContainer>
+          <Navigator screenOptions={createScreenOptions}>
+            <Screen name='Apod' component={Apod} />
+            <Screen name='Planets' component={PlanetsScreen} />
+            <Screen name='Settings' component={Settings} />
+          </Navigator>
+        </NavigationContainer>
       </ThemeProvider>
       <ExpoStatusBar style='auto' />
     </>
