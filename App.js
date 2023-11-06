@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { ThemeProvider } from 'styled-components/native';
+import { theme } from './src/infrastructure/theme';
+import { PlanetsScreen } from './src/features/planets/screens/planets.screen';
+import {
+  useFonts as useAudiowide,
+  Audiowide_400Regular,
+} from '@expo-google-fonts/audiowide';
+import {
+  useFonts as useQuestrial,
+  Questrial_400Regular,
+} from '@expo-google-fonts/questrial';
 
 export default function App() {
+  const [audiowideLoaded] = useAudiowide({ Audiowide_400Regular });
+  const [questrialLoaded] = useQuestrial({ Questrial_400Regular });
+  if (!audiowideLoaded || !questrialLoaded) return null;
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <ThemeProvider theme={theme}>
+        <PlanetsScreen />
+      </ThemeProvider>
+      <ExpoStatusBar style='auto' />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
