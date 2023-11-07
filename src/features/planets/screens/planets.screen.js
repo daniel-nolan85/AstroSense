@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import { Searchbar } from 'react-native-paper';
 import styled from 'styled-components/native';
 import { PlanetInfoCard } from '../components/planet-info-card.component';
 import { Spacer } from '../../../components/spacer/spacer.component';
@@ -7,10 +6,7 @@ import { SafeArea } from '../../../components/utils/safe-area.component';
 import { PlanetsContext } from '../../../services/planets/planets.context';
 import { Text } from '../../../components/typography/text.component';
 import { LoadingSpinner } from '../../../../assets/loading-spinner';
-
-const SearchContainer = styled.View`
-  padding: ${(props) => props.theme.space[3]};
-`;
+import { Search } from '../components/search.component';
 
 const PlanetList = styled.FlatList.attrs({
   contentContainerStyle: { padding: 16 },
@@ -24,9 +20,7 @@ export const PlanetsScreen = () => {
         <LoadingSpinner />
       ) : (
         <>
-          <SearchContainer>
-            <Searchbar />
-          </SearchContainer>
+          <Search />
           {!error ? (
             <PlanetList
               data={planets}
@@ -41,7 +35,9 @@ export const PlanetsScreen = () => {
               ListFooterComponent={<Spacer position='bottom' size='xxLarge' />}
             />
           ) : (
-            <Text variant='error'>{error}</Text>
+            <Spacer position='left' size='xLarge'>
+              <Text variant='error'>{error}</Text>
+            </Spacer>
           )}
         </>
       )}

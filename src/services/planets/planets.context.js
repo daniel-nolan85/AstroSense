@@ -7,27 +7,34 @@ export const PlanetsContextProvider = ({ children }) => {
   const [planets, setPlanets] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [keyword, setKeyword] = useState('');
 
   useEffect(() => {
-    retrievePlanets();
-  }, []);
+    retrievePlanets(keyword);
+  }, [keyword]);
 
-  const retrievePlanets = () => {
+  const retrievePlanets = (kwrd) => {
     setIsLoading(true);
-    planetsRequest('')
+    planetsRequest(kwrd)
       .then((results) => {
         setIsLoading(false);
+        setError(null);
         setPlanets(results);
       })
       .catch((err) => {
-        console.log(err);
         setIsLoading(false);
         setError(err);
       });
   };
 
+  const onSearch = (searchKeyword) => {
+    setKeyword(searchKeyword);
+  };
+
   return (
-    <PlanetsContext.Provider value={{ planets, isLoading, error }}>
+    <PlanetsContext.Provider
+      value={{ planets, isLoading, error, setError, search: onSearch, keyword }}
+    >
       {children}
     </PlanetsContext.Provider>
   );

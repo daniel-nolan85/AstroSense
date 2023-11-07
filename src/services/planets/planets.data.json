@@ -1,8 +1,8 @@
 [
   {
-    "name": "Mercury",
+    "name": "mercury",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/mercury_nfi21s.jpg",
-    "type": "Terrestrial",
+    "type": "terrestrial",
     "avgDistFromSun": ["57,909,000 km", "35,982,973 miles"],
     "diameter": ["4,879 km", "3,032 miles"],
     "dayDuration": "59 days",
@@ -15,9 +15,9 @@
     "description": "Mercury is the closest planet to the Sun. It's like the Sun's hot little friend. Even though it's the smallest planet, it's super speedy and zooms around the Sun really fast. Because it's so close to the Sun, it's super hot during the day and freezing cold at night. No place for a picnic!"
   },
   {
-    "name": "Venus",
+    "name": "venus",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330461/venus_lxo5fs.jpg",
-    "type": "Terrestrial",
+    "type": "terrestrial",
     "avgDistFromSun": ["108,209,000 km", "67,237,935 miles"],
     "diameter": ["12,104 km", "7,521 miles"],
     "dayDuration": "243 days",
@@ -30,9 +30,9 @@
     "description": "Venus is often called Earth's \"sister planet\" because it's similar in size. But watch out, it's super-duper hot, even hotter than Mercury! Venus has thick clouds that trap heat, making it a toasty place. It's sometimes called the \"Morning Star\" or the \"Evening Star\" because you can see it shining brightly in the morning and evening."
   },
   {
-    "name": "Earth",
+    "name": "earth",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/earth_nhiz2o.jpg",
-    "type": "Terrestrial",
+    "type": "terrestrial",
     "avgDistFromSun": ["149,596,000 km", "92,954,616 miles"],
     "diameter": ["12,742 km", "7,018 miles"],
     "dayDuration": "23 hours, 56 mins",
@@ -44,9 +44,9 @@
     "description": "Hey, that's where we live! Earth is a beautiful blue and green planet covered in oceans, forests, and deserts. It's the perfect place for all kinds of life, from animals to people. We have lovely seasons, great weather, and, most importantly, a breathable atmosphere."
   },
   {
-    "name": "Mars",
+    "name": "mars",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/mars_kt1uhl.jpg",
-    "type": "Terrestrial",
+    "type": "terrestrial",
     "avgDistFromSun": ["227,923,000 km", "141,624,742 miles"],
     "diameter": ["6,779 km", "4,212 miles"],
     "dayDuration": "24 hours, 40 mins",
@@ -59,9 +59,9 @@
     "description": "Mars is often called the \"Red Planet\" because it's covered in rusty red dust. It's the fourth planet from the Sun and is famous for its canyons and huge volcanoes. Scientists are curious about Mars because they think it might have had water long ago, and who knows, maybe it had aliens!"
   },
   {
-    "name": "Ceres",
+    "name": "ceres",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330458/ceres_x0l9do.jpg",
-    "type": "Dwarf",
+    "type": "dwarf",
     "avgDistFromSun": ["413,700,000 km", "257,061,262 miles"],
     "diameter": ["939 km", "583 miles"],
     "dayDuration": "9 hours, 5 mins",
@@ -72,9 +72,9 @@
     "description": "Ceres is the largest object in the asteroid belt, which is a big neighborhood of rocks and debris between Mars and Jupiter. It's like a tiny planet with a rocky surface. Ceres is named after the Roman goddess of agriculture."
   },
   {
-    "name": "Jupiter",
+    "name": "jupiter",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330459/jupiter_brbvch.jpg",
-    "type": "Gas giant",
+    "type": "gas giant",
     "avgDistFromSun": ["778,570,000 km", "483,780,819 miles"],
     "diameter": ["139,822 km", "86,881 miles"],
     "dayDuration": "9 hours, 55 mins",
@@ -87,9 +87,9 @@
     "description": "Jupiter is the largest planet in our solar system, and it's like a big, gas ball with colorful stripes. It has a bunch of moons, and one of them, Ganymede, is even bigger than the planet Mercury! Jupiter is also known for a giant storm called the \"Great Red Spot\", which has been swirling for hundreds of years."
   },
   {
-    "name": "Saturn",
+    "name": "saturn",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/saturn_beyizp.jpg",
-    "type": "Gas giant",
+    "type": "gas giant",
     "avgDistFromSun": ["1,433,530,000 km", "890,753,970 miles"],
     "diameter": ["120,536 km", "74,898 miles"],
     "dayDuration": "10 hours, 39 mins",
@@ -102,9 +102,9 @@
     "description": "Saturn is famous for its beautiful rings made of ice and rocks. It looks like it's wearing a sparkling belt! Saturn is also a gas giant like Jupiter. It's the second-largest planet in our solar system and has more than 80 moons. It's quite the celestial jewelry box!"
   },
   {
-    "name": "Uranus",
+    "name": "uranus",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330461/uranus_cc2ctx.jpg",
-    "type": "Neptunian",
+    "type": "neptunian",
     "avgDistFromSun": ["2,872,460,000 km", "1,784,863,343 miles"],
     "diameter": ["50,724 km", "31,518 miles"],
     "dayDuration": "17 hours, 14 mins",
@@ -117,9 +117,9 @@
     "description": "Uranus is a little strange because it spins on its side, unlike other planets that spin like tops. It's known for its beautiful blue color, and it's the only planet named after a Greek god, not a Roman one. Uranus has lots of icy moons and is pretty far from the Sun."
   },
   {
-    "name": "Neptune",
+    "name": "neptune",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330459/neptune_ee9enj.jpg",
-    "type": "Neptunian",
+    "type": "neptunian",
     "avgDistFromSun": ["4,495,060,000 km", "2,793,099,927 miles"],
     "diameter": ["49,244 km", "30,599 miles"],
     "dayDuration": "16 hours, 7 mins",
@@ -132,9 +132,9 @@
     "description": "Neptune is the last planet in our solar system. It's a big, bluish planet with powerful winds and huge storms. It's also very far from the Sun. Neptune is the god of the sea in Roman mythology, and it sure does look like an ocean planet with its deep blue hue."
   },
   {
-    "name": "Pluto",
+    "name": "pluto",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/pluto_opu0lp.jpg",
-    "type": "Dwarf",
+    "type": "dwarf",
     "avgDistFromSun": ["5,869,656,000 km", "3,647,234,018 miles"],
     "diameter": ["2,376 km", "1,476 miles"],
     "dayDuration": "6 days, 9 hours",
@@ -145,9 +145,9 @@
     "description": "Pluto used to be known as the ninth planet, but now it's called a dwarf planet. It's teeny-tiny compared to the other planets. Pluto is super cold and far away, and it has a heart-shaped spot on its surface. It's a mysterious little world that's part of the Kuiper Belt."
   },
   {
-    "name": "Haumea",
+    "name": "haumea",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330458/haumea_oe6al2.jpg",
-    "type": "Dwarf",
+    "type": "dwarf",
     "avgDistFromSun": ["6,450,100,000 km", "4,007,905,087 miles"],
     "diameter": ["1,632 km", "1,014 miles"],
     "dayDuration": "3 hours, 55 mins",
@@ -158,9 +158,9 @@
     "description": "Haumea is a dwarf planet named after a Hawaiian goddess. It's quite an unusual one because it's shaped like a stretched-out oval. Imagine a giant football or an egg. Haumea has two small moons, Hi'iaka and Namaka, which are like its little companions."
   },
   {
-    "name": "Makemake",
+    "name": "makemake",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/makemake_t6vka0.jpg",
-    "type": "Dwarf",
+    "type": "dwarf",
     "avgDistFromSun": ["6,796,200,000 km", "4,222,961,590 miles"],
     "diameter": ["1,434 km", "891 miles"],
     "dayDuration": "22 hours, 50 mins",
@@ -171,9 +171,9 @@
     "description": "Makemake is another dwarf planet found in the Kuiper Belt, which is like a big icy neighborhood beyond Neptune. It's named after the creation deity of the Rapa Nui people of Easter Island. Makemake is really cold, and it's covered in ice. It's one of the many interesting objects in the distant regions of our solar system."
   },
   {
-    "name": "Eris",
+    "name": "eris",
     "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330458/eris_p8ig05.jpg",
-    "type": "Dwarf",
+    "type": "dwarf",
     "avgDistFromSun": ["10,152,000,000 km", "6,308,158,392 miles"],
     "diameter": ["2,326 km", "1,445 miles"],
     "dayDuration": "25 hours, 54 mins",
