@@ -14,6 +14,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from './src/infrastructure/theme';
 import { SafeArea } from './src/components/utils/safe-area.component';
+import { PlanetsContextProvider } from './src/services/planets/planets.context';
 import { PlanetsScreen } from './src/features/planets/screens/planets.screen';
 
 const Tab = createBottomTabNavigator();
@@ -57,13 +58,15 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          <Navigator screenOptions={createScreenOptions}>
-            <Screen name='Apod' component={Apod} />
-            <Screen name='Planets' component={PlanetsScreen} />
-            <Screen name='Settings' component={Settings} />
-          </Navigator>
-        </NavigationContainer>
+        <PlanetsContextProvider>
+          <NavigationContainer>
+            <Navigator screenOptions={createScreenOptions}>
+              <Screen name='Apod' component={Apod} />
+              <Screen name='Planets' component={PlanetsScreen} />
+              <Screen name='Settings' component={Settings} />
+            </Navigator>
+          </NavigationContainer>
+        </PlanetsContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style='auto' />
     </>
