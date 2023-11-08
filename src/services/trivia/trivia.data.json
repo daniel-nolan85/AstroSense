@@ -1,0 +1,313 @@
+{
+  "images": [
+    "https://res.cloudinary.com/daufzqlld/image/upload/v1699449171/jdgy9nbajkhphrcdlm92.png",
+    "https://res.cloudinary.com/daufzqlld/image/upload/v1699448221/tvebochdq986s6rwpebp.png",
+    "https://res.cloudinary.com/daufzqlld/image/upload/v1699448239/fmgf8luubra2hxtbd2m1.png"
+  ],
+  "data": [
+    {
+      "question": "How far away from Earth is the moon?",
+      "correctAnswer": "238,900 miles",
+      "incorrectAnswers": ["18,500 miles", "487,300 miles", "1,238,400 miles"]
+    },
+    {
+      "question": "How far away from Earth is the sun?",
+      "correctAnswer": "92.68 million miles",
+      "incorrectAnswers": [
+        "2.54 million miles",
+        "548.82 million miles",
+        "1.69 billion miles"
+      ]
+    },
+    {
+      "question": "When did man first land on the moon?",
+      "correctAnswer": "July 20, 1969",
+      "incorrectAnswers": [
+        "August 18, 1984",
+        "May 26, 1999",
+        "October 27, 2018"
+      ]
+    },
+    {
+      "question": "Who was the first person to step foot on the moon?",
+      "correctAnswer": "Neil Armstrong",
+      "incorrectAnswers": ["Nelson Mandela", "Elvis Presley", "Amelia Earhart"]
+    },
+    {
+      "question": "What was Neil Armstrong's famous quote spoken from the moon?",
+      "correctAnswer": "That's one small step for man, one giant leap for mankind",
+      "incorrectAnswers": [
+        "That's a single stride for humanity, an enormous bound for all",
+        "That's one minor advance for an individual, one monumental leap for the human race",
+        "That's a modest stride for one, an immense leap for the global community"
+      ]
+    },
+    {
+      "question": "What was the name of the first spacecraft launched into space?",
+      "correctAnswer": "Sputnik 1",
+      "incorrectAnswers": [
+        "Space Tracker 1",
+        "Cosmic Traveler 1",
+        "Galactic Explorer 1"
+      ]
+    },
+    {
+      "question": "Who launched the first spacecraft into space?",
+      "correctAnswer": "The Soviet Union",
+      "incorrectAnswers": ["China", "USA", "Abu Dhabi"]
+    },
+    {
+      "question": "What are the four gas planets in our solar system?",
+      "correctAnswer": "Jupiter, Saturn, Uranus, and Neptune",
+      "incorrectAnswers": [
+        "Mars, Jupiter, Venus, and Uranus",
+        "Mercury, Saturn, Earth, and Neptune",
+        "Jupiter, Venus, Neptune, and Mercury"
+      ]
+    },
+    {
+      "question": "What are the four rocky planets in our solar system?",
+      "correctAnswer": "Mercury, Venus, Earth, and Mars",
+      "incorrectAnswers": [
+        "Mercury, Uranus, Earth, and Jupiter",
+        "Neptune, Venus, Jupiter, and Mars",
+        "Earth, Venus, Saturn, and Uranus"
+      ]
+    },
+    {
+      "question": "What is the name of the galaxy we live in?",
+      "correctAnswer": "The Milky Way",
+      "incorrectAnswers": [
+        "The Starry River",
+        "The Interstellar Realm",
+        "The Astral Whirlpool"
+      ]
+    },
+    {
+      "question": "What is the name of the brightest star in our galaxy?",
+      "correctAnswer": "Sirius, also known as Alpha Canis Majoris or the Dog Star",
+      "incorrectAnswers": [
+        "Betelgeuse, also known as Alpha Orionis",
+        "ArcAldebaranturus, also known as Alpha Tauri",
+        "Rigel, also known as Beta Orionis "
+      ]
+    },
+    {
+      "question": "What is the brightest planet in our solar system?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Jupiter", "Mars", "Neptune"]
+    },
+    {
+      "question": "How old is the Earth?",
+      "correctAnswer": "4.543 billion years old",
+      "incorrectAnswers": [
+        "2,000 years old",
+        "1.58 million years old",
+        "942.631 million years old"
+      ]
+    },
+    {
+      "question": "What was the name of the first space mission that landed on the moon?",
+      "correctAnswer": "Apollo 11",
+      "incorrectAnswers": [
+        "Eagle Landing",
+        "The Lunar Touchdown",
+        "Neil and Buzz's Lunar Expedition"
+      ]
+    },
+    {
+      "question": "What was the name of the space mission that first orbited the moon?",
+      "correctAnswer": "Apollo 8",
+      "incorrectAnswers": ["Lunar Loop", "Celestial Circuit", "Moon's Gateway"]
+    },
+    {
+      "question": "What is the closest planet to the sun?",
+      "correctAnswer": "Mercury",
+      "incorrectAnswers": ["Saturn", "Mars", "Jupiter"]
+    },
+    {
+      "question": "How many major rings does Saturn have?",
+      "correctAnswer": "7",
+      "incorrectAnswers": ["285", "5,928", "208,634"]
+    },
+    {
+      "question": "Which is the largest planet?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Neptune", "Earth", "Uranus"]
+    },
+    {
+      "question": "Which is the smallest planet?",
+      "correctAnswer": "Mercury",
+      "incorrectAnswers": ["Mars", "Saturn", "Venus"]
+    },
+    {
+      "question": "Which planet would float in water?",
+      "correctAnswer": "Saturn",
+      "incorrectAnswers": ["Earth", "Mercury", "Uranus"]
+    },
+    {
+      "question": "Which planet is the most dense?",
+      "correctAnswer": "Earth",
+      "incorrectAnswers": ["Venus", "Jupiter", "Neptune"]
+    },
+    {
+      "question": "Which planet is the most dense?",
+      "correctAnswer": "Earth",
+      "incorrectAnswers": ["Venus", "Jupiter", "Neptune"]
+    },
+    {
+      "question": "What is the closest star to our solar system?",
+      "correctAnswer": "Proxima Centauri",
+      "incorrectAnswers": ["UY Scuti", "Polaris", "Vega"]
+    },
+    {
+      "question": "Who invented the Hubble Space Telescope?",
+      "correctAnswer": "Edwin Hubble",
+      "incorrectAnswers": ["Leonardo DaVinci", "Galileo Galilei", "Hedy Lamarr"]
+    },
+    {
+      "question": "Who was the first person to use a telescope to look up into outer space?",
+      "correctAnswer": "Galileo Galilei",
+      "incorrectAnswers": [
+        "Nicolaus Copernicus",
+        "Queen Cleopatra",
+        "Joan of Arc"
+      ]
+    },
+    {
+      "question": "What do we call the gas and dust that follows a comet?",
+      "correctAnswer": "The comet's tail",
+      "incorrectAnswers": [
+        "The stardust halo",
+        "The nebulous residue",
+        "The cosmic smog"
+      ]
+    },
+    {
+      "question": "Which planet rotates the fastest?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Venus", "Neptune", "Mercury"]
+    },
+    {
+      "question": "Which planet rotates the slowest?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Earth", "Uranus", "Mars"]
+    },
+    {
+      "question": "Which is the coldest planet?",
+      "correctAnswer": "Uranus",
+      "incorrectAnswers": ["Neptune", "Mars", "Jupiter"]
+    },
+    {
+      "question": "Which is the hottest planet?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Mercury", "Saturn", "Earth"]
+    },
+    {
+      "question": "Who was the first woman in space?",
+      "correctAnswer": "Valentina Tereshkova",
+      "incorrectAnswers": ["Coco Chanel", "Eleanor Roosevelt", "Audrey Hepburn"]
+    },
+    {
+      "question": "Who was the first woman in space?",
+      "correctAnswer": "Valentina Tereshkova",
+      "incorrectAnswers": ["Coco Chanel", "Eleanor Roosevelt", "Audrey Hepburn"]
+    },
+    {
+      "question": "What kind of galaxy do we live in?",
+      "correctAnswer": "Spiral galaxy",
+      "incorrectAnswers": ["Elliptical galaxy", "Dwarf galaxy", "Ring Galaxy"]
+    },
+    {
+      "question": "What was the first animal in space?",
+      "correctAnswer": "A dog named Laika",
+      "incorrectAnswers": [
+        "A horse named Sparky",
+        "A goldfish named Bubbles",
+        "A parrot named Polly"
+      ]
+    },
+    {
+      "question": "Which planet has the strongest winds?",
+      "correctAnswer": "Neptune",
+      "incorrectAnswers": ["Earth", "Jupiter", "Venus"]
+    },
+    {
+      "question": "What is the outer layer of the atmosphere called?",
+      "correctAnswer": "The Exosphere",
+      "incorrectAnswers": [
+        "The Stratosphere",
+        "The Oort Cloud",
+        "The Ozone Layer"
+      ]
+    },
+    {
+      "question": "How long does it take light to reach us from the sun?",
+      "correctAnswer": "A little over 8 minutes",
+      "incorrectAnswers": [
+        "Just under 9 days",
+        "A year and 8 months",
+        "About 3 and a half weeks"
+      ]
+    },
+    {
+      "question": "What is a blue moon?",
+      "correctAnswer": "Name for when there are two full moons in one month",
+      "incorrectAnswers": [
+        "A moon that marks the equinox",
+        "A moon that signals the start of spring",
+        "A moon that is visible during the daytime"
+      ]
+    },
+    {
+      "question": "Which planet in our solar system has the most moons?",
+      "correctAnswer": "Saturn",
+      "incorrectAnswers": ["Jupiter", "Uranus", "Neptune"]
+    },
+    {
+      "question": "Which two planets in our solar system have no moons?",
+      "correctAnswer": "Mercury and Venus",
+      "incorrectAnswers": [
+        "Mars and Jupiter",
+        "Mercury and Uranus",
+        "Neptune and Venus"
+      ]
+    },
+    {
+      "question": "What happens during a solar eclipse?",
+      "correctAnswer": "The moon passes between the Sun and the Earth, causing a shadow that blocks the Sun's light",
+      "incorrectAnswers": [
+        "The Earth passes between the Moon and the Sun, casting a shadow on the Moon",
+        "The Sun temporarily vanishes from the sky",
+        "A solar eclipse occurs when a comet crosses in front of the Sun"
+      ]
+    },
+    {
+      "question": "What happens during a lunar eclipse?",
+      "correctAnswer": "The Earth moves between the Moon and the Sun, casting its shadow on the Moon",
+      "incorrectAnswers": [
+        "Lunar eclipses result from the Moon passing into the Earth's shadow",
+        "Lunar eclipses happen when a meteor shower takes place",
+        "It's an event where the Sun and Moon align perfectly, creating a double Moon effect"
+      ]
+    },
+    {
+      "question": "How old is our sun?",
+      "correctAnswer": "Approximately 4.6 billion years old",
+      "incorrectAnswers": [
+        "Approximately 300 thousand years old",
+        "Approximately 2.5 million years old",
+        "Approximately 980 trillion years old"
+      ]
+    },
+    {
+      "question": "What is the study of space called?",
+      "correctAnswer": "Astronomy",
+      "incorrectAnswers": [
+        "Paleontology",
+        "Approximately 2.5 million years old",
+        "Approximately 980 trillion years old"
+      ]
+    }
+  ]
+}
