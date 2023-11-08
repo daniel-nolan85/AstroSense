@@ -303,11 +303,319 @@
     {
       "question": "What is the study of space called?",
       "correctAnswer": "Astronomy",
+      "incorrectAnswers": ["Paleontology", "Meteorology", "Archaeology"]
+    },
+    {
+      "question": "What does NASA stand for?",
+      "correctAnswer": "National Aeronautics and Space Administration",
       "incorrectAnswers": [
-        "Paleontology",
-        "Approximately 2.5 million years old",
-        "Approximately 980 trillion years old"
+        "North American Space Authority",
+        "Northern Alliance of Space Agencies",
+        "National Aeronautics and Science Administration"
       ]
+    },
+    {
+      "question": "What is the name of the space shuttle that exploded in 1986?",
+      "correctAnswer": "The Challenger",
+      "incorrectAnswers": ["The Endeavour", "The Enterprise", "The Atlantis"]
+    },
+    {
+      "question": "What is the name of a scientist who studies space?",
+      "correctAnswer": "An astronomer",
+      "incorrectAnswers": ["A seismologist", "A geologist", "A psychologist"]
+    },
+    {
+      "question": "What planet in our solar system is known as the red planet?",
+      "correctAnswer": "Mars",
+      "incorrectAnswers": ["Venus", "Jupiter", "Uranus"]
+    },
+    {
+      "question": "How long would it take you to get to Mars from Earth?",
+      "correctAnswer": "9 months",
+      "incorrectAnswers": ["6 weeks", "8 years", "3 days"]
+    },
+    {
+      "question": "How many stars are in the Milky Way?",
+      "correctAnswer": "100 billion",
+      "incorrectAnswers": ["5,000", "200 million", "150"]
+    },
+    {
+      "question": "What three things are comets made out of?",
+      "correctAnswer": "Dust, rock, and ice",
+      "incorrectAnswers": [
+        "Magma, crystals, and gas",
+        "Plasma, granite, and copper",
+        "Ash, minerals, and oxygen"
+      ]
+    },
+    {
+      "question": "Name the three types of meteorites.",
+      "correctAnswer": "Iron, stony-iron, and stony",
+      "incorrectAnswers": [
+        "Copper, nickel, and gold",
+        "Plutonium, uranium, and radium",
+        "Sapphire, ruby, and emerald"
+      ]
+    },
+    {
+      "question": "When does a meteor become a meteorite?",
+      "correctAnswer": "When it enters the Earth's atmosphere",
+      "incorrectAnswers": [
+        "When it collides with a satellite",
+        "When it enters a black hole",
+        "When it lands on the Moon"
+      ]
+    },
+    {
+      "question": "What causes the ocean's high and low tides?",
+      "correctAnswer": "The gravitational pull from the moon",
+      "incorrectAnswers": [
+        "The Earth's rotation on its axis",
+        "The alignment of the planets",
+        "The rotation of the Sun"
+      ]
+    },
+    {
+      "question": "How long does it take the Moon to orbit the Earth?",
+      "correctAnswer": "28 days",
+      "incorrectAnswers": ["24 hours", "365 days", "9 months"]
+    },
+    {
+      "question": "How long does it take the Earth to orbit the Sun?",
+      "correctAnswer": "365 days",
+      "incorrectAnswers": ["24 hours", "28 days", "9 months"]
+    },
+    {
+      "question": "Which planet has the largest ocean?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Earth", "Uranus", "Mercury"]
+    },
+    {
+      "question": "How many constellations are there?",
+      "correctAnswer": "88",
+      "incorrectAnswers": ["27", "1999", "10"]
+    },
+    {
+      "question": "Who discovered that the Earth was not at the center of the solar system?",
+      "correctAnswer": "Nicolaus Copernicus",
+      "incorrectAnswers": [
+        "Albert Einstein",
+        "Alexander Hamilton",
+        "Diego Maradona"
+      ]
+    },
+    {
+      "question": "What does the ISS stand for?",
+      "correctAnswer": "International Space Station",
+      "incorrectAnswers": [
+        "Interplanetary Space Shuttle",
+        "Intergalactic Space Simulation",
+        "Ionization Suppression System"
+      ]
+    },
+    {
+      "question": "When was the ISS first launched into orbit?",
+      "correctAnswer": "November 20, 1998",
+      "incorrectAnswers": ["November 5, 1955", "July 4, 1776", "April 15, 1912"]
+    },
+    {
+      "question": "How many Earth's could fit inside the Sun?",
+      "correctAnswer": "1.3 million",
+      "incorrectAnswers": ["88", "332,000", "1,957"]
+    },
+    {
+      "question": "Which planet is known as the morning star?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Saturn", "Mercury", "Earth"]
+    },
+    {
+      "question": "What is a place calledwhere you can go to see the night sky projections?",
+      "correctAnswer": "A planetarium",
+      "incorrectAnswers": [
+        "An aquarium",
+        "A post office",
+        "A fast-food restaurant"
+      ]
+    },
+    {
+      "question": "Which four planets have rings around them?",
+      "correctAnswer": "Jupiter, Saturn, Uranus, and Neptune",
+      "incorrectAnswers": [
+        "Venus, Saturn, Mercury, and Neptune",
+        "Mars, Uranus, Mercury, and Jupiter",
+        "Saturn, Neptune, Jupiter, and Mars"
+      ]
+    },
+    {
+      "question": "Which five planets can be seen with the naked eye?",
+      "correctAnswer": "Mercury, Venus, Mars, Jupiter, and Saturn",
+      "incorrectAnswers": [
+        "Venus, Saturn, Mars, Uranus, and Neptune",
+        "Mars, Uranus, Mercury, Venus, and Jupiter",
+        "Saturn, Neptune, Jupiter, Uranus, and Mars"
+      ]
+    },
+    {
+      "question": "Which planet rotates on its side?",
+      "correctAnswer": "Uranus",
+      "incorrectAnswers": ["Venus", "Mars", "Saturn"]
+    },
+    {
+      "question": "What keeps the planets in a stable orbit around the Sun?",
+      "correctAnswer": "Gravity",
+      "incorrectAnswers": ["Friction", "Elecromagnetism", "Solar flares"]
+    },
+    {
+      "question": "When did the space age begin?",
+      "correctAnswer": "October 4, 1957, with the launch of Sputnik 1",
+      "incorrectAnswers": [
+        "July 20, 1969, with the Apollo 11 Moon landing",
+        "April 12, 1961, with Yuri Gagarin's first human spaceflight",
+        "November 22, 1963, with the assassination of John F. Kennedy"
+      ]
+    },
+    {
+      "question": "What do you call a group of meteoroids that can be seen together?",
+      "correctAnswer": "A meteor shower",
+      "incorrectAnswers": [
+        "A meteor parade",
+        "A meteor jamboree",
+        "A meteor rendezvous"
+      ]
+    },
+    {
+      "question": "Which planet has had the most missions sent to it?",
+      "correctAnswer": "Mars",
+      "incorrectAnswers": ["Saturn", "Mercury", "Neptune"]
+    },
+    {
+      "question": "What is the name of the only spacecraft to have visited Uranus?",
+      "correctAnswer": "Voyager 2",
+      "incorrectAnswers": ["Spirit Rover", "Sputnik 1", "Apollo 11"]
+    },
+    {
+      "question": "Which planet has a bright red spot on it?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Venus", "Mars", "Saturn"]
+    },
+    {
+      "question": "What is the name of the theory that explains how our universe was created?",
+      "correctAnswer": "The Big Bang Theory",
+      "incorrectAnswers": [
+        "The Potato Salad Theory",
+        "The Hula Hoop Theory",
+        "The Musical Chairs Theory"
+      ]
+    },
+    {
+      "question": "How much does a space suit weigh?",
+      "correctAnswer": "280 pounds",
+      "incorrectAnswers": [
+        "36 tonnes",
+        "6 ounces",
+        "About as much as a butternut squash"
+      ]
+    },
+    {
+      "question": "Who was the first astronaut to do a space walk?",
+      "correctAnswer": "Alexei Leonov",
+      "incorrectAnswers": ["Yuri Gagarin", "Buzz Lightyear", "Sally Ride"]
+    },
+    {
+      "question": "Which is the third planet from the sun?",
+      "correctAnswer": "Earth",
+      "incorrectAnswers": ["Uranus", "Saturn", "Mars"]
+    },
+    {
+      "question": "How fast is the speed of light?",
+      "correctAnswer": "186,000 miles per second",
+      "incorrectAnswers": [
+        "88 miles per hour",
+        "343 meters per second",
+        "4,860 feet per minute"
+      ]
+    },
+    {
+      "question": "Which planet has a blue sunset?",
+      "correctAnswer": "Mars",
+      "incorrectAnswers": ["Uranus", "Neptune", "Venus"]
+    },
+    {
+      "question": "Where is the Asteroid Belt located?",
+      "correctAnswer": "Between Mars and Jupiter",
+      "incorrectAnswers": [
+        "Between Venus and Earth",
+        "Between Saturn and Uranus",
+        "Beyond Neptune"
+      ]
+    },
+    {
+      "question": "How many moons does Mars have?",
+      "correctAnswer": "2",
+      "incorrectAnswers": ["28", "0", "74"]
+    },
+    {
+      "question": "What are the two most abundant gases that make up the sun?",
+      "correctAnswer": "Hydrogen and helium",
+      "incorrectAnswers": [
+        "Sulphur and phosphorus",
+        "Methane and ammonia",
+        "Nitrogen and neon"
+      ]
+    },
+    {
+      "question": "Which planet has sulfuric acid clouds surrounding it?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Earth", "Mercury", "Neptune"]
+    },
+    {
+      "question": "What is the longest amount of time that someone has lived on the ISS?",
+      "correctAnswer": "355 days",
+      "incorrectAnswers": ["6 weeks", "8 years", "11 months"]
+    },
+    {
+      "question": "Which planet is named after the Roman Goddess of Beauty?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Saturn", "Earth", "Uranus"]
+    },
+    {
+      "question": "Which constellation points to the North Star?",
+      "correctAnswer": "The Big Dipper",
+      "incorrectAnswers": ["Cassiopeia", "Sagittarius", "Orion"]
+    },
+    {
+      "question": "What is another name for the North Star?",
+      "correctAnswer": "Polaris",
+      "incorrectAnswers": ["Regulus", "Arcturus", "VY Canis Majoris"]
+    },
+    {
+      "question": "Which planet is named after the Roman God of the Sea?",
+      "correctAnswer": "Neptune",
+      "incorrectAnswers": ["Mars", "Mercury", "Venus"]
+    },
+    {
+      "question": "Approximately how many stars can we see in the night sky with our naked eye?",
+      "correctAnswer": "2000",
+      "incorrectAnswers": ["600", "8 million", "100 billion"]
+    },
+    {
+      "question": "What is the most common type of star?",
+      "correctAnswer": "Red Dwarf stars",
+      "incorrectAnswers": [
+        "Neutron stars",
+        "Blue Hypergiant stars",
+        "Quasar stars"
+      ]
+    },
+    {
+      "question": "What color is the coldest star?",
+      "correctAnswer": "Red",
+      "incorrectAnswers": ["Blue", "White", "Brown"]
+    },
+    {
+      "question": "What color is the hottest star?",
+      "correctAnswer": "Blue",
+      "incorrectAnswers": ["Yellow", "Red", "Orange"]
     }
   ]
 }
