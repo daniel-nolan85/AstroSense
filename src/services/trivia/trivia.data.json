@@ -800,7 +800,7 @@
       "difficulty": "medium"
     },
     {
-      "question": "What is the planet fifth from the sun?",
+      "question": "Which is the planet fifth from the sun?",
       "correctAnswer": "Jupiter",
       "incorrectAnswers": ["Earth", "Uranus", "Mars"],
       "difficulty": "easy"
@@ -926,6 +926,156 @@
         "No, never"
       ],
       "difficulty": "medium"
+    },
+    {
+      "question": "Which planet has the most visible rings?",
+      "correctAnswer": "Saturn",
+      "incorrectAnswers": ["Mars", "Uranus", "Neptune"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "All planets travel around the sun in a specific pathway. What is this pathway called?",
+      "correctAnswer": "Orbit",
+      "incorrectAnswers": ["Space trail", "Cosmic lane", "Celestial groove"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these planets would you not be able to stand on because it is mostly gas?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Mars", "Mercury", "Venus"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "The word \"galaxy\" comes from a Greek word, meaning what?",
+      "correctAnswer": "Milky",
+      "incorrectAnswers": ["Spiral", "Colossal", "Plethora"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which of these is one of Saturn's moons?",
+      "correctAnswer": "Enceladus",
+      "incorrectAnswers": ["Umbriel", "Triton", "Charon"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What was the constellation Orion named after?",
+      "correctAnswer": "A skilled hunter in ancient Greece",
+      "incorrectAnswers": [
+        "A rare species of Mediterranean bird",
+        "A legendary pirate in ancient maritime tales",
+        "A type of spaceship in science fiction"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What kind of solar system body, visible from Earth only once every 75 years, is named after Edmond Halley?",
+      "correctAnswer": "A comet",
+      "incorrectAnswers": ["A dwarf planet", "An asteroid", "A meteoroid"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which planet has two moons called Phobos and Deimos?",
+      "correctAnswer": "Mars",
+      "incorrectAnswers": ["Uranus", "Venus", "Saturn"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which was the first country to send humans to the Earth's moon through the Apollo space program?",
+      "correctAnswer": "USA",
+      "incorrectAnswers": ["UK", "China", "Russia"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "One of the most amazing natural displays in the sky is the Aurora Borealis. What is this also known as?",
+      "correctAnswer": "The Northern Lights",
+      "incorrectAnswers": [
+        "The Polar Sparkle",
+        "The Arctic Disco",
+        "The Solar Flare Extravaganza"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which planet is between Mars and Saturn?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Mercury", "Uranus", "Earth"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which is the fourth planet from the sun?",
+      "correctAnswer": "Mars",
+      "incorrectAnswers": ["Neptune", "Saturn", "Venus"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which is the sixth planet from the sun?",
+      "correctAnswer": "Saturn",
+      "incorrectAnswers": ["Mercury", "Earth", "Neptune"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which is the seventh planet from the sun?",
+      "correctAnswer": "Uranus",
+      "incorrectAnswers": ["Neptune", "Mars", "Jupiter"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which is the eighth planet from the sun?",
+      "correctAnswer": "Neptune",
+      "incorrectAnswers": ["Venus", "Earth", "Saturn"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the sun?",
+      "correctAnswer": "A star",
+      "incorrectAnswers": ["A planet", "A comet", "A meteor"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "How many of the planets are named after Gods?",
+      "correctAnswer": "7",
+      "incorrectAnswers": ["8", "2", "5"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is a light year?",
+      "correctAnswer": "The distance light travels in a year",
+      "incorrectAnswers": [
+        "A year when there's a lot of sunlight",
+        "The time it takes for a lightbulb to burn out",
+        "The lifespan of a star"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which constellation is shaped like a crab?",
+      "correctAnswer": "Cancer",
+      "incorrectAnswers": ["Scorpio", "Sagittarius", "Leo"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which of the following is NOT a possible process for a star to undergo?",
+      "correctAnswer": "Burn forever",
+      "incorrectAnswers": ["Cool down", "Explode", "Expand"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What do you call a system where two stars are close enough to each other to significantly affect each other's orbits?",
+      "correctAnswer": "Binary stars",
+      "incorrectAnswers": ["Gemini", "Globular cluster", "Spiral galaxy"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which planet is the second largest in our solar system?",
+      "correctAnswer": "Saturn",
+      "incorrectAnswers": ["Uranus", "Earth", "Neptune"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which planet is sometimes called the blue planet?",
+      "correctAnswer": "Earth",
+      "incorrectAnswers": ["Uranus", "Jupiter", "Neptune"],
+      "difficulty": "easy"
     }
   ]
 }
