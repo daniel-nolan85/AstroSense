@@ -8,7 +8,8 @@
     {
       "question": "How far away from Earth is the moon?",
       "correctAnswer": "238,900 miles",
-      "incorrectAnswers": ["18,500 miles", "487,300 miles", "1,238,400 miles"]
+      "incorrectAnswers": ["18,500 miles", "487,300 miles", "1,238,400 miles"],
+      "difficulty": "hard"
     },
     {
       "question": "How far away from Earth is the sun?",
@@ -17,7 +18,8 @@
         "2.54 million miles",
         "548.82 million miles",
         "1.69 billion miles"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "When did man first land on the moon?",
@@ -26,12 +28,14 @@
         "August 18, 1984",
         "May 26, 1999",
         "October 27, 2018"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "Who was the first person to step foot on the moon?",
       "correctAnswer": "Neil Armstrong",
-      "incorrectAnswers": ["Nelson Mandela", "Elvis Presley", "Amelia Earhart"]
+      "incorrectAnswers": ["Nelson Mandela", "Elvis Presley", "Amelia Earhart"],
+      "difficulty": "medium"
     },
     {
       "question": "What was Neil Armstrong's famous quote spoken from the moon?",
@@ -40,7 +44,8 @@
         "That's a single stride for humanity, an enormous bound for all",
         "That's one minor advance for an individual, one monumental leap for the human race",
         "That's a modest stride for one, an immense leap for the global community"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What was the name of the first spacecraft launched into space?",
@@ -49,12 +54,14 @@
         "Space Tracker 1",
         "Cosmic Traveler 1",
         "Galactic Explorer 1"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "Who launched the first spacecraft into space?",
       "correctAnswer": "The Soviet Union",
-      "incorrectAnswers": ["China", "USA", "Abu Dhabi"]
+      "incorrectAnswers": ["China", "USA", "Abu Dhabi"],
+      "difficulty": "hard"
     },
     {
       "question": "What are the four gas planets in our solar system?",
@@ -63,7 +70,8 @@
         "Mars, Jupiter, Venus, and Uranus",
         "Mercury, Saturn, Earth, and Neptune",
         "Jupiter, Venus, Neptune, and Mercury"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "What are the four rocky planets in our solar system?",
@@ -72,7 +80,8 @@
         "Mercury, Uranus, Earth, and Jupiter",
         "Neptune, Venus, Jupiter, and Mars",
         "Earth, Venus, Saturn, and Uranus"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "What is the name of the galaxy we live in?",
@@ -81,21 +90,24 @@
         "The Starry River",
         "The Interstellar Realm",
         "The Astral Whirlpool"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "What is the name of the brightest star in our galaxy?",
       "correctAnswer": "Sirius, also known as Alpha Canis Majoris or the Dog Star",
       "incorrectAnswers": [
         "Betelgeuse, also known as Alpha Orionis",
-        "ArcAldebaranturus, also known as Alpha Tauri",
+        "Aldebaran, also known as Alpha Tauri",
         "Rigel, also known as Beta Orionis "
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "What is the brightest planet in our solar system?",
       "correctAnswer": "Venus",
-      "incorrectAnswers": ["Jupiter", "Mars", "Neptune"]
+      "incorrectAnswers": ["Jupiter", "Mars", "Neptune"],
+      "difficulty": "easy"
     },
     {
       "question": "How old is the Earth?",
@@ -104,7 +116,8 @@
         "2,000 years old",
         "1.58 million years old",
         "942.631 million years old"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What was the name of the first space mission that landed on the moon?",
@@ -113,57 +126,66 @@
         "Eagle Landing",
         "The Lunar Touchdown",
         "Neil and Buzz's Lunar Expedition"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What was the name of the space mission that first orbited the moon?",
       "correctAnswer": "Apollo 8",
-      "incorrectAnswers": ["Lunar Loop", "Celestial Circuit", "Moon's Gateway"]
+      "incorrectAnswers": ["Lunar Loop", "Celestial Circuit", "Moon's Gateway"],
+      "difficulty": "medium"
     },
     {
       "question": "What is the closest planet to the sun?",
       "correctAnswer": "Mercury",
-      "incorrectAnswers": ["Saturn", "Mars", "Jupiter"]
+      "incorrectAnswers": ["Saturn", "Mars", "Jupiter"],
+      "difficulty": "easy"
     },
     {
       "question": "How many major rings does Saturn have?",
       "correctAnswer": "7",
-      "incorrectAnswers": ["285", "5,928", "208,634"]
+      "incorrectAnswers": ["285", "5,928", "208,634"],
+      "difficulty": "medium"
     },
     {
       "question": "Which is the largest planet?",
       "correctAnswer": "Jupiter",
-      "incorrectAnswers": ["Neptune", "Earth", "Uranus"]
+      "incorrectAnswers": ["Neptune", "Earth", "Uranus"],
+      "difficulty": "easy"
     },
     {
       "question": "Which is the smallest planet?",
       "correctAnswer": "Mercury",
-      "incorrectAnswers": ["Mars", "Saturn", "Venus"]
+      "incorrectAnswers": ["Mars", "Saturn", "Venus"],
+      "difficulty": "easy"
     },
     {
       "question": "Which planet would float in water?",
       "correctAnswer": "Saturn",
-      "incorrectAnswers": ["Earth", "Mercury", "Uranus"]
+      "incorrectAnswers": ["Earth", "Mercury", "Uranus"],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet is the most dense?",
       "correctAnswer": "Earth",
-      "incorrectAnswers": ["Venus", "Jupiter", "Neptune"]
-    },
-    {
-      "question": "Which planet is the most dense?",
-      "correctAnswer": "Earth",
-      "incorrectAnswers": ["Venus", "Jupiter", "Neptune"]
+      "incorrectAnswers": ["Venus", "Jupiter", "Neptune"],
+      "difficulty": "medium"
     },
     {
       "question": "What is the closest star to our solar system?",
       "correctAnswer": "Proxima Centauri",
-      "incorrectAnswers": ["UY Scuti", "Polaris", "Vega"]
+      "incorrectAnswers": ["UY Scuti", "Polaris", "Vega"],
+      "difficulty": "hard"
     },
     {
       "question": "Who invented the Hubble Space Telescope?",
       "correctAnswer": "Edwin Hubble",
-      "incorrectAnswers": ["Leonardo DaVinci", "Galileo Galilei", "Hedy Lamarr"]
+      "incorrectAnswers": [
+        "Leonardo DaVinci",
+        "Galileo Galilei",
+        "Hedy Lamarr"
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "Who was the first person to use a telescope to look up into outer space?",
@@ -172,7 +194,8 @@
         "Nicolaus Copernicus",
         "Queen Cleopatra",
         "Joan of Arc"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "What do we call the gas and dust that follows a comet?",
@@ -181,42 +204,48 @@
         "The stardust halo",
         "The nebulous residue",
         "The cosmic smog"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet rotates the fastest?",
       "correctAnswer": "Jupiter",
-      "incorrectAnswers": ["Venus", "Neptune", "Mercury"]
+      "incorrectAnswers": ["Venus", "Neptune", "Mercury"],
+      "difficulty": "easy"
     },
     {
       "question": "Which planet rotates the slowest?",
       "correctAnswer": "Venus",
-      "incorrectAnswers": ["Earth", "Uranus", "Mars"]
+      "incorrectAnswers": ["Earth", "Uranus", "Mars"],
+      "difficulty": "easy"
     },
     {
       "question": "Which is the coldest planet?",
       "correctAnswer": "Uranus",
-      "incorrectAnswers": ["Neptune", "Mars", "Jupiter"]
+      "incorrectAnswers": ["Neptune", "Mars", "Jupiter"],
+      "difficulty": "easy"
     },
     {
       "question": "Which is the hottest planet?",
       "correctAnswer": "Venus",
-      "incorrectAnswers": ["Mercury", "Saturn", "Earth"]
+      "incorrectAnswers": ["Mercury", "Saturn", "Earth"],
+      "difficulty": "easy"
     },
     {
       "question": "Who was the first woman in space?",
       "correctAnswer": "Valentina Tereshkova",
-      "incorrectAnswers": ["Coco Chanel", "Eleanor Roosevelt", "Audrey Hepburn"]
-    },
-    {
-      "question": "Who was the first woman in space?",
-      "correctAnswer": "Valentina Tereshkova",
-      "incorrectAnswers": ["Coco Chanel", "Eleanor Roosevelt", "Audrey Hepburn"]
+      "incorrectAnswers": [
+        "Coco Chanel",
+        "Eleanor Roosevelt",
+        "Audrey Hepburn"
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What kind of galaxy do we live in?",
       "correctAnswer": "Spiral galaxy",
-      "incorrectAnswers": ["Elliptical galaxy", "Dwarf galaxy", "Ring Galaxy"]
+      "incorrectAnswers": ["Elliptical galaxy", "Dwarf galaxy", "Ring Galaxy"],
+      "difficulty": "medium"
     },
     {
       "question": "What was the first animal in space?",
@@ -225,12 +254,14 @@
         "A horse named Sparky",
         "A goldfish named Bubbles",
         "A parrot named Polly"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet has the strongest winds?",
       "correctAnswer": "Neptune",
-      "incorrectAnswers": ["Earth", "Jupiter", "Venus"]
+      "incorrectAnswers": ["Earth", "Jupiter", "Venus"],
+      "difficulty": "easy"
     },
     {
       "question": "What is the outer layer of the atmosphere called?",
@@ -239,7 +270,8 @@
         "The Stratosphere",
         "The Oort Cloud",
         "The Ozone Layer"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "How long does it take light to reach us from the sun?",
@@ -248,7 +280,8 @@
         "Just under 9 days",
         "A year and 8 months",
         "About 3 and a half weeks"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "What is a blue moon?",
@@ -257,12 +290,14 @@
         "A moon that marks the equinox",
         "A moon that signals the start of spring",
         "A moon that is visible during the daytime"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "Which planet in our solar system has the most moons?",
       "correctAnswer": "Saturn",
-      "incorrectAnswers": ["Jupiter", "Uranus", "Neptune"]
+      "incorrectAnswers": ["Jupiter", "Uranus", "Neptune"],
+      "difficulty": "medium"
     },
     {
       "question": "Which two planets in our solar system have no moons?",
@@ -271,7 +306,8 @@
         "Mars and Jupiter",
         "Mercury and Uranus",
         "Neptune and Venus"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What happens during a solar eclipse?",
@@ -280,7 +316,8 @@
         "The Earth passes between the Moon and the Sun, casting a shadow on the Moon",
         "The Sun temporarily vanishes from the sky",
         "A solar eclipse occurs when a comet crosses in front of the Sun"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "What happens during a lunar eclipse?",
@@ -289,7 +326,8 @@
         "Lunar eclipses result from the Moon passing into the Earth's shadow",
         "Lunar eclipses happen when a meteor shower takes place",
         "It's an event where the Sun and Moon align perfectly, creating a double Moon effect"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "How old is our sun?",
@@ -298,12 +336,14 @@
         "Approximately 300 thousand years old",
         "Approximately 2.5 million years old",
         "Approximately 980 trillion years old"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What is the study of space called?",
       "correctAnswer": "Astronomy",
-      "incorrectAnswers": ["Paleontology", "Meteorology", "Archaeology"]
+      "incorrectAnswers": ["Paleontology", "Meteorology", "Archaeology"],
+      "difficulty": "medium"
     },
     {
       "question": "What does NASA stand for?",
@@ -312,32 +352,38 @@
         "North American Space Authority",
         "Northern Alliance of Space Agencies",
         "National Aeronautics and Science Administration"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "What is the name of the space shuttle that exploded in 1986?",
       "correctAnswer": "The Challenger",
-      "incorrectAnswers": ["The Endeavour", "The Enterprise", "The Atlantis"]
+      "incorrectAnswers": ["The Endeavour", "The Enterprise", "The Atlantis"],
+      "difficulty": "hard"
     },
     {
       "question": "What is the name of a scientist who studies space?",
       "correctAnswer": "An astronomer",
-      "incorrectAnswers": ["A seismologist", "A geologist", "A psychologist"]
+      "incorrectAnswers": ["A seismologist", "A geologist", "A psychologist"],
+      "difficulty": "medium"
     },
     {
       "question": "What planet in our solar system is known as the red planet?",
       "correctAnswer": "Mars",
-      "incorrectAnswers": ["Venus", "Jupiter", "Uranus"]
+      "incorrectAnswers": ["Venus", "Jupiter", "Uranus"],
+      "difficulty": "easy"
     },
     {
       "question": "How long would it take you to get to Mars from Earth?",
       "correctAnswer": "9 months",
-      "incorrectAnswers": ["6 weeks", "8 years", "3 days"]
+      "incorrectAnswers": ["6 weeks", "8 years", "3 days"],
+      "difficulty": "medium"
     },
     {
       "question": "How many stars are in the Milky Way?",
       "correctAnswer": "100 billion",
-      "incorrectAnswers": ["5,000", "200 million", "150"]
+      "incorrectAnswers": ["5,000", "200 million", "150"],
+      "difficulty": "medium"
     },
     {
       "question": "What three things are comets made out of?",
@@ -346,7 +392,8 @@
         "Magma, crystals, and gas",
         "Plasma, granite, and copper",
         "Ash, minerals, and oxygen"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "Name the three types of meteorites.",
@@ -355,7 +402,8 @@
         "Copper, nickel, and gold",
         "Plutonium, uranium, and radium",
         "Sapphire, ruby, and emerald"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "When does a meteor become a meteorite?",
@@ -364,7 +412,8 @@
         "When it collides with a satellite",
         "When it enters a black hole",
         "When it lands on the Moon"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "What causes the ocean's high and low tides?",
@@ -373,27 +422,32 @@
         "The Earth's rotation on its axis",
         "The alignment of the planets",
         "The rotation of the Sun"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "How long does it take the Moon to orbit the Earth?",
       "correctAnswer": "28 days",
-      "incorrectAnswers": ["24 hours", "365 days", "9 months"]
+      "incorrectAnswers": ["24 hours", "365 days", "9 months"],
+      "difficulty": "medium"
     },
     {
       "question": "How long does it take the Earth to orbit the Sun?",
       "correctAnswer": "365 days",
-      "incorrectAnswers": ["24 hours", "28 days", "9 months"]
+      "incorrectAnswers": ["24 hours", "28 days", "9 months"],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet has the largest ocean?",
       "correctAnswer": "Jupiter",
-      "incorrectAnswers": ["Earth", "Uranus", "Mercury"]
+      "incorrectAnswers": ["Earth", "Uranus", "Mercury"],
+      "difficulty": "hard"
     },
     {
       "question": "How many constellations are there?",
       "correctAnswer": "88",
-      "incorrectAnswers": ["27", "1999", "10"]
+      "incorrectAnswers": ["27", "1999", "10"],
+      "difficulty": "medium"
     },
     {
       "question": "Who discovered that the Earth was not at the center of the solar system?",
@@ -402,7 +456,8 @@
         "Albert Einstein",
         "Alexander Hamilton",
         "Diego Maradona"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What does the ISS stand for?",
@@ -411,31 +466,40 @@
         "Interplanetary Space Shuttle",
         "Intergalactic Space Simulation",
         "Ionization Suppression System"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "When was the ISS first launched into orbit?",
       "correctAnswer": "November 20, 1998",
-      "incorrectAnswers": ["November 5, 1955", "July 4, 1776", "April 15, 1912"]
+      "incorrectAnswers": [
+        "November 5, 1955",
+        "July 4, 1776",
+        "April 15, 1912"
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "How many Earth's could fit inside the Sun?",
       "correctAnswer": "1.3 million",
-      "incorrectAnswers": ["88", "332,000", "1,957"]
+      "incorrectAnswers": ["88", "332,000", "1,957"],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet is known as the morning star?",
       "correctAnswer": "Venus",
-      "incorrectAnswers": ["Saturn", "Mercury", "Earth"]
+      "incorrectAnswers": ["Saturn", "Mercury", "Earth"],
+      "difficulty": "hard"
     },
     {
-      "question": "What is a place calledwhere you can go to see the night sky projections?",
+      "question": "What is a place called where you can go to see the night sky projections?",
       "correctAnswer": "A planetarium",
       "incorrectAnswers": [
         "An aquarium",
         "A post office",
         "A fast-food restaurant"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "Which four planets have rings around them?",
@@ -444,7 +508,8 @@
         "Venus, Saturn, Mercury, and Neptune",
         "Mars, Uranus, Mercury, and Jupiter",
         "Saturn, Neptune, Jupiter, and Mars"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "Which five planets can be seen with the naked eye?",
@@ -453,17 +518,20 @@
         "Venus, Saturn, Mars, Uranus, and Neptune",
         "Mars, Uranus, Mercury, Venus, and Jupiter",
         "Saturn, Neptune, Jupiter, Uranus, and Mars"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "Which planet rotates on its side?",
       "correctAnswer": "Uranus",
-      "incorrectAnswers": ["Venus", "Mars", "Saturn"]
+      "incorrectAnswers": ["Venus", "Mars", "Saturn"],
+      "difficulty": "easy"
     },
     {
       "question": "What keeps the planets in a stable orbit around the Sun?",
       "correctAnswer": "Gravity",
-      "incorrectAnswers": ["Friction", "Elecromagnetism", "Solar flares"]
+      "incorrectAnswers": ["Friction", "Elecromagnetism", "Solar flares"],
+      "difficulty": "medium"
     },
     {
       "question": "When did the space age begin?",
@@ -472,7 +540,8 @@
         "July 20, 1969, with the Apollo 11 Moon landing",
         "April 12, 1961, with Yuri Gagarin's first human spaceflight",
         "November 22, 1963, with the assassination of John F. Kennedy"
-      ]
+      ],
+      "difficulty": "hard"
     },
     {
       "question": "What do you call a group of meteoroids that can be seen together?",
@@ -481,22 +550,26 @@
         "A meteor parade",
         "A meteor jamboree",
         "A meteor rendezvous"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "Which planet has had the most missions sent to it?",
       "correctAnswer": "Mars",
-      "incorrectAnswers": ["Saturn", "Mercury", "Neptune"]
+      "incorrectAnswers": ["Saturn", "Mercury", "Neptune"],
+      "difficulty": "medium"
     },
     {
       "question": "What is the name of the only spacecraft to have visited Uranus?",
       "correctAnswer": "Voyager 2",
-      "incorrectAnswers": ["Spirit Rover", "Sputnik 1", "Apollo 11"]
+      "incorrectAnswers": ["Spirit Rover", "Sputnik 1", "Apollo 11"],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet has a bright red spot on it?",
       "correctAnswer": "Jupiter",
-      "incorrectAnswers": ["Venus", "Mars", "Saturn"]
+      "incorrectAnswers": ["Venus", "Mars", "Saturn"],
+      "difficulty": "easy"
     },
     {
       "question": "What is the name of the theory that explains how our universe was created?",
@@ -505,7 +578,8 @@
         "The Potato Salad Theory",
         "The Hula Hoop Theory",
         "The Musical Chairs Theory"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "How much does a space suit weigh?",
@@ -514,17 +588,20 @@
         "36 tonnes",
         "6 ounces",
         "About as much as a butternut squash"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "Who was the first astronaut to do a space walk?",
       "correctAnswer": "Alexei Leonov",
-      "incorrectAnswers": ["Yuri Gagarin", "Buzz Lightyear", "Sally Ride"]
+      "incorrectAnswers": ["Yuri Gagarin", "Buzz Lightyear", "Sally Ride"],
+      "difficulty": "hard"
     },
     {
       "question": "Which is the third planet from the sun?",
       "correctAnswer": "Earth",
-      "incorrectAnswers": ["Uranus", "Saturn", "Mars"]
+      "incorrectAnswers": ["Uranus", "Saturn", "Mars"],
+      "difficulty": "easy"
     },
     {
       "question": "How fast is the speed of light?",
@@ -533,12 +610,14 @@
         "88 miles per hour",
         "343 meters per second",
         "4,860 feet per minute"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet has a blue sunset?",
       "correctAnswer": "Mars",
-      "incorrectAnswers": ["Uranus", "Neptune", "Venus"]
+      "incorrectAnswers": ["Uranus", "Neptune", "Venus"],
+      "difficulty": "medium"
     },
     {
       "question": "Where is the Asteroid Belt located?",
@@ -547,12 +626,14 @@
         "Between Venus and Earth",
         "Between Saturn and Uranus",
         "Beyond Neptune"
-      ]
+      ],
+      "difficulty": "easy"
     },
     {
       "question": "How many moons does Mars have?",
       "correctAnswer": "2",
-      "incorrectAnswers": ["28", "0", "74"]
+      "incorrectAnswers": ["28", "0", "74"],
+      "difficulty": "easy"
     },
     {
       "question": "What are the two most abundant gases that make up the sun?",
@@ -561,42 +642,50 @@
         "Sulphur and phosphorus",
         "Methane and ammonia",
         "Nitrogen and neon"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet has sulfuric acid clouds surrounding it?",
       "correctAnswer": "Venus",
-      "incorrectAnswers": ["Earth", "Mercury", "Neptune"]
+      "incorrectAnswers": ["Earth", "Mercury", "Neptune"],
+      "difficulty": "medium"
     },
     {
       "question": "What is the longest amount of time that someone has lived on the ISS?",
       "correctAnswer": "355 days",
-      "incorrectAnswers": ["6 weeks", "8 years", "11 months"]
+      "incorrectAnswers": ["6 weeks", "8 years", "11 months"],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet is named after the Roman Goddess of Beauty?",
       "correctAnswer": "Venus",
-      "incorrectAnswers": ["Saturn", "Earth", "Uranus"]
+      "incorrectAnswers": ["Saturn", "Earth", "Uranus"],
+      "difficulty": "medium"
     },
     {
       "question": "Which constellation points to the North Star?",
       "correctAnswer": "The Big Dipper",
-      "incorrectAnswers": ["Cassiopeia", "Sagittarius", "Orion"]
+      "incorrectAnswers": ["Cassiopeia", "Sagittarius", "Orion"],
+      "difficulty": "medium"
     },
     {
       "question": "What is another name for the North Star?",
       "correctAnswer": "Polaris",
-      "incorrectAnswers": ["Regulus", "Arcturus", "VY Canis Majoris"]
+      "incorrectAnswers": ["Regulus", "Arcturus", "VY Canis Majoris"],
+      "difficulty": "medium"
     },
     {
       "question": "Which planet is named after the Roman God of the Sea?",
       "correctAnswer": "Neptune",
-      "incorrectAnswers": ["Mars", "Mercury", "Venus"]
+      "incorrectAnswers": ["Mars", "Mercury", "Venus"],
+      "difficulty": "medium"
     },
     {
       "question": "Approximately how many stars can we see in the night sky with our naked eye?",
       "correctAnswer": "2000",
-      "incorrectAnswers": ["600", "8 million", "100 billion"]
+      "incorrectAnswers": ["600", "8 million", "100 billion"],
+      "difficulty": "medium"
     },
     {
       "question": "What is the most common type of star?",
@@ -605,17 +694,238 @@
         "Neutron stars",
         "Blue Hypergiant stars",
         "Quasar stars"
-      ]
+      ],
+      "difficulty": "medium"
     },
     {
       "question": "What color is the coldest star?",
       "correctAnswer": "Red",
-      "incorrectAnswers": ["Blue", "White", "Brown"]
+      "incorrectAnswers": ["Blue", "White", "Brown"],
+      "difficulty": "medium"
     },
     {
       "question": "What color is the hottest star?",
       "correctAnswer": "Blue",
-      "incorrectAnswers": ["Yellow", "Red", "Orange"]
+      "incorrectAnswers": ["Yellow", "Red", "Orange"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "If you were standing on the moon and the sun was shining on you, what color would the sky be?",
+      "correctAnswer": "Black",
+      "incorrectAnswers": ["Yellow", "Blue", "Purple"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "The word 'astrophysics' is based on Greek words. Do you know which of these bodies 'astro' translates to?",
+      "correctAnswer": "Sun",
+      "incorrectAnswers": ["Moon", "Planet", "Star"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many stars are there in our solar system?",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["8", "100 billion", "200 million"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which planet is sometimes called Earth's sister planet?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Mercury", "Uranus", "Neptune"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of the following objects emits light?",
+      "correctAnswer": "Stars",
+      "incorrectAnswers": ["Moons", "Planets", "Asteroids"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "About how often does a lunar eclipse occur?",
+      "correctAnswer": "Twice a year",
+      "incorrectAnswers": [
+        "Every week",
+        "Once every 100 years",
+        "Once a decade"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many planets in our solar system are made from gas?",
+      "correctAnswer": "4",
+      "incorrectAnswers": ["6", "8", "2"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these is NOT a star constellation?",
+      "correctAnswer": "Halo",
+      "incorrectAnswers": ["Scutum", "Pegasus", "Ara"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is Saturn most famous for?",
+      "correctAnswer": "Rings",
+      "incorrectAnswers": ["Rainbows", "Bells", "Flowers"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these is a moon of Jupiter?",
+      "correctAnswer": "Io",
+      "incorrectAnswers": ["Enceladus", "Titan", "Phobos"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does luminosity mean?",
+      "correctAnswer": "The brightness of a star",
+      "incorrectAnswers": [
+        "The age of a star",
+        "The size of a star",
+        "The total mass of a star"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Why can't see the surface of Venus from space?",
+      "correctAnswer": "Because Venus is covered with a thick layer of clouds",
+      "incorrectAnswers": [
+        "Because Venus is too small to be visible from space",
+        "Because Venus is made entirely of gas",
+        "Because Venus is covered in a solid layer of ice"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What layer of the atmosphere is the hottest?",
+      "correctAnswer": "Thermosphere",
+      "incorrectAnswers": ["Heliopause", "Magnetosphere", "Troposphere"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the planet fifth from the sun?",
+      "correctAnswer": "Jupiter",
+      "incorrectAnswers": ["Earth", "Uranus", "Mars"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these constellations is NOT a sign of the zodiac?",
+      "correctAnswer": "Phoenix",
+      "incorrectAnswers": ["Taurus", "Gemini", "Pisces"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the second planet from the Sun?",
+      "correctAnswer": "Venus",
+      "incorrectAnswers": ["Neptune", "Saturn", "Mercury"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these dwarf planets was originally classified as a planet?",
+      "correctAnswer": "Pluto",
+      "incorrectAnswers": ["Ceres", "Makemake", "Eris"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the highest mountain on Mars?",
+      "correctAnswer": "Olympus Mons",
+      "incorrectAnswers": ["Mount Everest", "K2", "Pikes Peak"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Mars is called the red planet. But why does this planet appear red?",
+      "correctAnswer": "Because of the presence iron oxide on its surface",
+      "incorrectAnswers": [
+        "Because it's covered in red paint",
+        "Because of the red lava on its surface",
+        "Because it's inhabited by red aliens"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which of the following is NOT a source of energy emitted by a star?",
+      "correctAnswer": "Gasoline",
+      "incorrectAnswers": ["Hydrogen", "Carbon", "Helium"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the term used to describe the speed needed to leave the Earth's gravitational pull?",
+      "correctAnswer": "Escape velocity",
+      "incorrectAnswers": [
+        "Lift-off force",
+        "Space thrust",
+        "Gravitational resistance"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "What are Saturn's rings mostly made of?",
+      "correctAnswer": "Ice, dust, and rock",
+      "incorrectAnswers": [
+        "Gold and precious metals",
+        "Lava and molten rock",
+        "Cotton candy and marshmallows"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "question": "From what direction do we see the sun rise?",
+      "correctAnswer": "East",
+      "incorrectAnswers": ["North", "South", "West"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which of these is NOT a word you can use to describe the shape of the Moon?",
+      "correctAnswer": "String",
+      "incorrectAnswers": ["Gibbous", "Full", "Crescent"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "How many natural satellites does the Earth have?",
+      "correctAnswer": "1",
+      "incorrectAnswers": ["3", "7", "5"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "What word is used to describe the shape of the Moon's orbit around the Earth?",
+      "correctAnswer": "Elliptical",
+      "incorrectAnswers": ["Hexagonal", "Triangular", "Pentagonal"],
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which of the following is our solar system's only natural light source?",
+      "correctAnswer": "The Sun",
+      "incorrectAnswers": ["The Earth", "The Moon", "Saturn's rings"],
+      "difficulty": "easy"
+    },
+    {
+      "question": "The Earth's axis is slightly tilted. What does this cause?",
+      "correctAnswer": "Seasons",
+      "incorrectAnswers": ["Days", "Nights", "Years"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "When it is summer in the northern hemisphere, what season will it be in the southern hemisphere?",
+      "correctAnswer": "Winter",
+      "incorrectAnswers": ["Spring", "Summer", "Autumn"],
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which of these statements is correct?",
+      "correctAnswer": "Our galaxy moves through space",
+      "incorrectAnswers": [
+        "The Sun orbits the Earth",
+        "Our galaxy rotates around an axis",
+        "Our galaxy is considered a dwarf galaxy"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "question": "When an astronaut is in the International Space Station, can they go outside?",
+      "correctAnswer": "Yes, if work needs to be done outside",
+      "incorrectAnswers": [
+        "Only the Commander can go out of the Space Station",
+        "Yes, if they are low on eggs and need to run to the store",
+        "No, never"
+      ],
+      "difficulty": "medium"
     }
   ]
 }

@@ -1,5 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  Text,
+  TextInput,
+  View,
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Animated,
+  SafeAreaView,
+  Modal,
+} from 'react-native';
+import data from '../../../services/trivia/trivia.data.json';
+import { SafeArea } from '../../../components/utils/safe-area.component';
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -11,32 +23,73 @@ const shuffleArray = (array) => {
 export const TriviaQuestionScreen = ({ navigation }) => {
   const [questions, setQuestions] = useState();
   const [questionNum, setQuestionNum] = useState(0);
+  const [questionsAmount, setQuestionsAmount] = useState(10);
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
+  const [progress, setProgress] = useState(new Animated.Value(0));
 
   useEffect(() => {
     getQuiz();
   }, []);
 
-  const getQuiz = async () => {
-    const url =
-      'https://opentdb.com/api.php?amount=10&type=multiple&encode=url3986';
-    const res = await fetch(url);
-    const data = await res.json();
-    console.log(data);
-    setQuestions(data.results);
-    setOptions(generateOptionsAndShuffle(data.results[0]));
+  const getQuiz = () => {
+    const getRandomQuestions = () => {
+      const qs = [...data.data];
+      const randomQuestions = [];
+
+      for (let i = 0; i < questionsAmount; i++) {
+        const randomIndex = Math.floor(Math.random() * qs.length);
+        randomQuestions.push(qs.splice(randomIndex, 1)[0]);
+      }
+
+      setQuestions(randomQuestions);
+      setOptions(generateOptionsAndShuffle(randomQuestions[0]));
+    };
+
+    getRandomQuestions();
   };
 
   const generateOptionsAndShuffle = (_question) => {
-    const options = [..._question.incorrect_answers];
-    options.push(_question.correct_answer);
+    const options = [..._question.incorrectAnswers];
+    options.push(_question.correctAnswer);
     shuffleArray(options);
     return options;
   };
 
+  const progressAnim = progress.interpolate({
+    inputRange: [0, questionsAmount],
+    outputRange: ['10%', '100%'],
+  });
+
+  const progressBar = () => {
+    return (
+      <View
+        style={{
+          width: '90%',
+          height: 20,
+          borderRadius: 20,
+          backgroundColor: '#00000020',
+          marginHorizontal: 20,
+        }}
+      >
+        <Animated.View
+          style={[
+            {
+              height: 20,
+              borderRadius: 20,
+              backgroundColor: '#3498db',
+            },
+            {
+              width: progressAnim,
+            },
+          ]}
+        ></Animated.View>
+      </View>
+    );
+  };
+
   const handleSelectedOption = (_option) => {
-    if (_option === questions[questionNum].correct_answer) {
+    if (_option === questions[questionNum].correctAnswer) {
       setScore(score + 10);
     }
   };
@@ -44,81 +97,85 @@ export const TriviaQuestionScreen = ({ navigation }) => {
   const handleNext = () => {
     setQuestionNum(questionNum + 1);
     setOptions(generateOptionsAndShuffle(questions[questionNum + 1]));
+    Animated.timing(progress, {
+      toValue: questionNum + 1,
+      duration: 1000,
+      useNativeDriver: false,
+    }).start();
+  };
+
+  const handleFinish = () => {
+    Animated.timing(progress, {
+      toValue: questionNum + 1,
+      duration: 1000,
+      useNativeDriver: false,
+    }).start();
+
+    setTimeout(() => {
+      navigate('TriviaResult', { score });
+    }, 1000);
   };
 
   const { navigate } = navigation;
 
   return (
-    <View style={styles.container}>
-      {questions && (
-        <>
-          <View style={styles.top}>
-            <Text style={styles.question}>
-              Q {questionNum + 1}.{' '}
-              {decodeURIComponent(questions[questionNum].question)}
-            </Text>
-          </View>
-          <View style={styles.options}>
-            <TouchableOpacity
-              style={styles.optionButton}
-              onPress={() => handleSelectedOption(options[0])}
-            >
-              <Text style={styles.option}>
-                {decodeURIComponent(options[0])}
+    <SafeArea>
+      {progressBar()}
+      <View style={styles.container}>
+        {questions && (
+          <>
+            <View style={styles.top}>
+              <Text style={styles.question}>
+                Q {questionNum + 1}. {questions[questionNum].question}
               </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.optionButton}
-              onPress={() => handleSelectedOption(options[1])}
-            >
-              <Text style={styles.option}>
-                {decodeURIComponent(options[1])}
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.optionButton}
-              onPress={() => handleSelectedOption(options[2])}
-            >
-              <Text style={styles.option}>
-                {decodeURIComponent(options[2])}
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.optionButton}
-              onPress={() => handleSelectedOption(options[3])}
-            >
-              <Text style={styles.option}>
-                {decodeURIComponent(options[3])}
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.bottom}>
-            {/* <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>PREV</Text>
-            </TouchableOpacity> */}
-            {questionNum < 9 && (
-              <TouchableOpacity style={styles.button} onPress={handleNext}>
-                <Text style={styles.buttonText}>NEXT</Text>
-              </TouchableOpacity>
-            )}
-            {questionNum === 9 && (
+            </View>
+            <View style={styles.options}>
               <TouchableOpacity
-                onPress={() => navigate('TriviaResult', { score })}
-                style={styles.button}
+                style={styles.optionButton}
+                onPress={() => handleSelectedOption(options[0])}
               >
-                <Text style={styles.buttonText}>SHOW RESULTS</Text>
+                <Text style={styles.option}>{options[0]}</Text>
               </TouchableOpacity>
-            )}
-          </View>
-        </>
-      )}
-    </View>
+              <TouchableOpacity
+                style={styles.optionButton}
+                onPress={() => handleSelectedOption(options[1])}
+              >
+                <Text style={styles.option}>{options[1]}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.optionButton}
+                onPress={() => handleSelectedOption(options[2])}
+              >
+                <Text style={styles.option}>{options[2]}</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.optionButton}
+                onPress={() => handleSelectedOption(options[3])}
+              >
+                <Text style={styles.option}>{options[3]}</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.bottom}>
+              {questionNum < questionsAmount - 1 && (
+                <TouchableOpacity style={styles.button} onPress={handleNext}>
+                  <Text style={styles.buttonText}>NEXT</Text>
+                </TouchableOpacity>
+              )}
+              {questionNum === questionsAmount - 1 && (
+                <TouchableOpacity onPress={handleFinish} style={styles.button}>
+                  <Text style={styles.buttonText}>SHOW RESULTS</Text>
+                </TouchableOpacity>
+              )}
+            </View>
+          </>
+        )}
+      </View>
+    </SafeArea>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 40,
     paddingHorizontal: 20,
     height: '100%',
   },
