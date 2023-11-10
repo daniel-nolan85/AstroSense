@@ -1,5 +1,6 @@
 {
   "images": [
+    "https://res.cloudinary.com/daufzqlld/image/upload/v1699631839/astronaut_ks9mcf.png",
     "https://res.cloudinary.com/daufzqlld/image/upload/v1699449171/jdgy9nbajkhphrcdlm92.png",
     "https://res.cloudinary.com/daufzqlld/image/upload/v1699448221/tvebochdq986s6rwpebp.png",
     "https://res.cloudinary.com/daufzqlld/image/upload/v1699448239/fmgf8luubra2hxtbd2m1.png"
@@ -287,7 +288,7 @@
         "A parrot named Polly"
       ],
       "difficulty": "medium",
-      "image": "https://res.cloudinary.com/daufzqlld/image/upload/v1699552010/cat_juafld.png"
+      "image": "https://res.cloudinary.com/daufzqlld/image/upload/v1699594912/cat_u5rwmi.jpg"
     },
     {
       "question": "Which planet has the strongest winds?",

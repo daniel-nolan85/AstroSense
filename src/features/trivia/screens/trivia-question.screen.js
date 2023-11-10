@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Animated } from 'react-native';
+import { useState, useEffect, useRef } from 'react';
+import { Animated, View } from 'react-native';
 import data from '../../../services/trivia/trivia.data.json';
 import { SafeArea } from '../../../components/utils/safe-area.component';
 import { TriviaQuestionCard } from '../components/trivia-question-card.component';
@@ -13,34 +13,56 @@ const shuffleArray = (array) => {
   }
 };
 
-export const TriviaQuestionScreen = ({ navigation }) => {
+export const TriviaQuestionScreen = ({ navigation, route }) => {
+  const { difficulty, duration } = route.params;
+
   const [questions, setQuestions] = useState();
   const [questionNum, setQuestionNum] = useState(0);
-  const [questionsAmount, setQuestionsAmount] = useState(10);
+  const [level, setLevel] = useState('');
+  const [questionsAmount, setQuestionsAmount] = useState(null);
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
   const [progress] = useState(new Animated.Value(0));
   const [visible, setVisible] = useState(false);
   const [correct, setCorrect] = useState(false);
 
-  const easy = data.data.filter((item) => item.difficulty === 'hard');
-  console.log(easy.length);
+  useEffect(() => {
+    setLevel(difficulty);
+    setQuestionsAmount(duration);
+  }, []);
 
   useEffect(() => {
-    getQuiz();
-  }, []);
+    if (level && questionsAmount) {
+      getQuiz();
+    }
+  }, [level, questionsAmount]);
+
+  const scrollRef = useRef();
 
   const getQuiz = () => {
     const getRandomQuestions = () => {
       const qs = [...data.data];
+      const filteredQuestions = qs.filter(
+        (question) => question.difficulty === level
+      );
+
+      if (filteredQuestions.length < questionsAmount) {
+        console.error(`Not enough questions with difficulty '${level}'`);
+        return;
+      }
+
       const randomQuestions = [];
       for (let i = 0; i < questionsAmount; i++) {
-        const randomIndex = Math.floor(Math.random() * qs.length);
-        randomQuestions.push(qs.splice(randomIndex, 1)[0]);
+        const randomIndex = Math.floor(
+          Math.random() * filteredQuestions.length
+        );
+        randomQuestions.push(filteredQuestions.splice(randomIndex, 1)[0]);
       }
+
       setQuestions(randomQuestions);
       setOptions(generateOptionsAndShuffle(randomQuestions[0]));
     };
+
     getRandomQuestions();
   };
 
@@ -60,6 +82,9 @@ export const TriviaQuestionScreen = ({ navigation }) => {
   };
 
   const handleNext = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ x: 0, y: 0, animated: false });
+    }
     setVisible(false);
     setCorrect(false);
     setQuestionNum(questionNum + 1);
@@ -72,23 +97,17 @@ export const TriviaQuestionScreen = ({ navigation }) => {
   };
 
   const handleFinish = () => {
-    setVisible(false);
-    setCorrect(false);
-    Animated.timing(progress, {
-      toValue: questionNum + 1,
-      duration: 1000,
-      useNativeDriver: false,
-    }).start();
-
+    navigate('TriviaResult', { score });
     setTimeout(() => {
-      navigate('TriviaResult', { score });
-    }, 1000);
+      setVisible(false);
+      setCorrect(false);
+    }, 500);
   };
 
   const { navigate } = navigation;
 
   return (
-    <SafeArea>
+    <SafeArea style={{ flex: 1 }}>
       <ProgressBar progress={progress} questionsAmount={questionsAmount} />
       {questions && (
         <>
@@ -97,6 +116,7 @@ export const TriviaQuestionScreen = ({ navigation }) => {
             options={options}
             image={questions[questionNum].image}
             handleSelectedOption={handleSelectedOption}
+            scrollRef={scrollRef}
           />
           <TriviaModal
             visible={visible}

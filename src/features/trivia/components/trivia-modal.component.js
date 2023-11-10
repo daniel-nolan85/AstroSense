@@ -14,7 +14,11 @@ export const TriviaModal = ({
     <SafeArea>
       <Modal visible={visible}>
         <View
-          style={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1,
+          }}
         >
           {correct ? (
             <Text variant='title'>You got it right!</Text>

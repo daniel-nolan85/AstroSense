@@ -1,12 +1,14 @@
-import { Card } from 'react-native-paper';
 import styled from 'styled-components/native';
 import { Text } from '../../../components/typography/text.component';
 
-export const QuestionCard = styled(Card)`
-  margin: ${(props) => props.theme.space[3]};
+export const QuestionCard = styled.View`
+  margin-top: ${(props) => props.theme.space[2]};
+  margin-left: ${(props) => props.theme.space[3]};
+  margin-right: ${(props) => props.theme.space[3]};
   background-color: ${(props) => props.theme.colors.bg.primary};
-  flex: 1;
-  height: 93%;
+  height: 97%;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 `;
 
 export const QuestionCardCover = styled.Image`
