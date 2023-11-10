@@ -1,7 +1,7 @@
 [
   {
     "name": "mercury",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/mercury_nfi21s.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547437/mercury_xvks2k.jpg",
     "type": "terrestrial",
     "avgDistFromSun": ["57,909,000 km", "35,982,973 miles"],
     "diameter": ["4,879 km", "3,032 miles"],
@@ -16,7 +16,7 @@
   },
   {
     "name": "venus",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330461/venus_lxo5fs.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547442/venus_exj4ih.jpg",
     "type": "terrestrial",
     "avgDistFromSun": ["108,209,000 km", "67,237,935 miles"],
     "diameter": ["12,104 km", "7,521 miles"],
@@ -31,7 +31,7 @@
   },
   {
     "name": "earth",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/earth_nhiz2o.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547434/earth_pko5ej.jpg",
     "type": "terrestrial",
     "avgDistFromSun": ["149,596,000 km", "92,954,616 miles"],
     "diameter": ["12,742 km", "7,018 miles"],
@@ -45,7 +45,7 @@
   },
   {
     "name": "mars",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/mars_kt1uhl.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547435/mars_aquegw.jpg",
     "type": "terrestrial",
     "avgDistFromSun": ["227,923,000 km", "141,624,742 miles"],
     "diameter": ["6,779 km", "4,212 miles"],
@@ -60,7 +60,7 @@
   },
   {
     "name": "ceres",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330458/ceres_x0l9do.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547435/ceres_o8nmsz.jpg",
     "type": "dwarf",
     "avgDistFromSun": ["413,700,000 km", "257,061,262 miles"],
     "diameter": ["939 km", "583 miles"],
@@ -73,7 +73,7 @@
   },
   {
     "name": "jupiter",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330459/jupiter_brbvch.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547435/jupiter_a7rscc.jpg",
     "type": "gas giant",
     "avgDistFromSun": ["778,570,000 km", "483,780,819 miles"],
     "diameter": ["139,822 km", "86,881 miles"],
@@ -88,7 +88,7 @@
   },
   {
     "name": "saturn",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/saturn_beyizp.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547439/saturn_v0af2o.jpg",
     "type": "gas giant",
     "avgDistFromSun": ["1,433,530,000 km", "890,753,970 miles"],
     "diameter": ["120,536 km", "74,898 miles"],
@@ -103,7 +103,7 @@
   },
   {
     "name": "uranus",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330461/uranus_cc2ctx.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547441/uranus_yr1bpt.jpg",
     "type": "neptunian",
     "avgDistFromSun": ["2,872,460,000 km", "1,784,863,343 miles"],
     "diameter": ["50,724 km", "31,518 miles"],
@@ -118,7 +118,7 @@
   },
   {
     "name": "neptune",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330459/neptune_ee9enj.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547438/neptune_iseeox.jpg",
     "type": "neptunian",
     "avgDistFromSun": ["4,495,060,000 km", "2,793,099,927 miles"],
     "diameter": ["49,244 km", "30,599 miles"],
@@ -133,7 +133,7 @@
   },
   {
     "name": "pluto",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/pluto_opu0lp.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547438/pluto_fstn9q.jpg",
     "type": "dwarf",
     "avgDistFromSun": ["5,869,656,000 km", "3,647,234,018 miles"],
     "diameter": ["2,376 km", "1,476 miles"],
@@ -146,7 +146,7 @@
   },
   {
     "name": "haumea",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330458/haumea_oe6al2.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547434/haumea_a61nhe.jpg",
     "type": "dwarf",
     "avgDistFromSun": ["6,450,100,000 km", "4,007,905,087 miles"],
     "diameter": ["1,632 km", "1,014 miles"],
@@ -159,7 +159,7 @@
   },
   {
     "name": "makemake",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330460/makemake_t6vka0.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547435/makemake_pzcqt9.jpg",
     "type": "dwarf",
     "avgDistFromSun": ["6,796,200,000 km", "4,222,961,590 miles"],
     "diameter": ["1,434 km", "891 miles"],
@@ -172,7 +172,7 @@
   },
   {
     "name": "eris",
-    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699330458/eris_p8ig05.jpg",
+    "photo": "https://res.cloudinary.com/daufzqlld/image/upload/v1699547434/eris_abjpi0.jpg",
     "type": "dwarf",
     "avgDistFromSun": ["10,152,000,000 km", "6,308,158,392 miles"],
     "diameter": ["2,326 km", "1,445 miles"],

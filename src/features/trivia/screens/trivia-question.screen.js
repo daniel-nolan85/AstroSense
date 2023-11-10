@@ -1,17 +1,10 @@
 import { useState, useEffect } from 'react';
-import {
-  Text,
-  TextInput,
-  View,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  Animated,
-  SafeAreaView,
-  Modal,
-} from 'react-native';
+import { Animated } from 'react-native';
 import data from '../../../services/trivia/trivia.data.json';
 import { SafeArea } from '../../../components/utils/safe-area.component';
+import { TriviaQuestionCard } from '../components/trivia-question-card.component';
+import { ProgressBar } from '../components/trivia-progress-bar.component';
+import { TriviaModal } from '../components/trivia-modal.component';
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -26,7 +19,12 @@ export const TriviaQuestionScreen = ({ navigation }) => {
   const [questionsAmount, setQuestionsAmount] = useState(10);
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
-  const [progress, setProgress] = useState(new Animated.Value(0));
+  const [progress] = useState(new Animated.Value(0));
+  const [visible, setVisible] = useState(false);
+  const [correct, setCorrect] = useState(false);
+
+  const easy = data.data.filter((item) => item.difficulty === 'hard');
+  console.log(easy.length);
 
   useEffect(() => {
     getQuiz();
@@ -36,16 +34,13 @@ export const TriviaQuestionScreen = ({ navigation }) => {
     const getRandomQuestions = () => {
       const qs = [...data.data];
       const randomQuestions = [];
-
       for (let i = 0; i < questionsAmount; i++) {
         const randomIndex = Math.floor(Math.random() * qs.length);
         randomQuestions.push(qs.splice(randomIndex, 1)[0]);
       }
-
       setQuestions(randomQuestions);
       setOptions(generateOptionsAndShuffle(randomQuestions[0]));
     };
-
     getRandomQuestions();
   };
 
@@ -56,45 +51,17 @@ export const TriviaQuestionScreen = ({ navigation }) => {
     return options;
   };
 
-  const progressAnim = progress.interpolate({
-    inputRange: [0, questionsAmount],
-    outputRange: ['10%', '100%'],
-  });
-
-  const progressBar = () => {
-    return (
-      <View
-        style={{
-          width: '90%',
-          height: 20,
-          borderRadius: 20,
-          backgroundColor: '#00000020',
-          marginHorizontal: 20,
-        }}
-      >
-        <Animated.View
-          style={[
-            {
-              height: 20,
-              borderRadius: 20,
-              backgroundColor: '#3498db',
-            },
-            {
-              width: progressAnim,
-            },
-          ]}
-        ></Animated.View>
-      </View>
-    );
-  };
-
   const handleSelectedOption = (_option) => {
+    setVisible(true);
     if (_option === questions[questionNum].correctAnswer) {
       setScore(score + 10);
+      setCorrect(true);
     }
   };
 
   const handleNext = () => {
+    setVisible(false);
+    setCorrect(false);
     setQuestionNum(questionNum + 1);
     setOptions(generateOptionsAndShuffle(questions[questionNum + 1]));
     Animated.timing(progress, {
@@ -105,6 +72,8 @@ export const TriviaQuestionScreen = ({ navigation }) => {
   };
 
   const handleFinish = () => {
+    setVisible(false);
+    setCorrect(false);
     Animated.timing(progress, {
       toValue: questionNum + 1,
       duration: 1000,
@@ -120,103 +89,26 @@ export const TriviaQuestionScreen = ({ navigation }) => {
 
   return (
     <SafeArea>
-      {progressBar()}
-      <View style={styles.container}>
-        {questions && (
-          <>
-            <View style={styles.top}>
-              <Text style={styles.question}>
-                Q {questionNum + 1}. {questions[questionNum].question}
-              </Text>
-            </View>
-            <View style={styles.options}>
-              <TouchableOpacity
-                style={styles.optionButton}
-                onPress={() => handleSelectedOption(options[0])}
-              >
-                <Text style={styles.option}>{options[0]}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.optionButton}
-                onPress={() => handleSelectedOption(options[1])}
-              >
-                <Text style={styles.option}>{options[1]}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.optionButton}
-                onPress={() => handleSelectedOption(options[2])}
-              >
-                <Text style={styles.option}>{options[2]}</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.optionButton}
-                onPress={() => handleSelectedOption(options[3])}
-              >
-                <Text style={styles.option}>{options[3]}</Text>
-              </TouchableOpacity>
-            </View>
-            <View style={styles.bottom}>
-              {questionNum < questionsAmount - 1 && (
-                <TouchableOpacity style={styles.button} onPress={handleNext}>
-                  <Text style={styles.buttonText}>NEXT</Text>
-                </TouchableOpacity>
-              )}
-              {questionNum === questionsAmount - 1 && (
-                <TouchableOpacity onPress={handleFinish} style={styles.button}>
-                  <Text style={styles.buttonText}>SHOW RESULTS</Text>
-                </TouchableOpacity>
-              )}
-            </View>
-          </>
-        )}
-      </View>
+      <ProgressBar progress={progress} questionsAmount={questionsAmount} />
+      {questions && (
+        <>
+          <TriviaQuestionCard
+            question={questions[questionNum].question}
+            options={options}
+            image={questions[questionNum].image}
+            handleSelectedOption={handleSelectedOption}
+          />
+          <TriviaModal
+            visible={visible}
+            setVisible={setVisible}
+            handleNext={handleNext}
+            handleFinish={handleFinish}
+            correct={correct}
+            questionNum={questionNum}
+            questionsAmount={questionsAmount}
+          />
+        </>
+      )}
     </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 20,
-    height: '100%',
-  },
-  top: {
-    marginVertical: 16,
-  },
-  question: {
-    fontSize: 28,
-  },
-  options: {
-    marginVertical: 16,
-    flex: 1,
-  },
-  option: {
-    fontSize: 18,
-    fontWeight: '500',
-    color: 'white',
-  },
-  optionButton: {
-    padding: 12,
-    marginVertical: 6,
-    backgroundColor: '#34a0a4',
-    borderRadius: 12,
-  },
-  bottom: {
-    marginBottom: 12,
-    paddingVertical: 16,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-  },
-  button: {
-    backgroundColor: '#1a759f',
-    padding: 12,
-    paddingHorizontal: 16,
-    borderRadius: 16,
-    alignItems: 'center',
-    marginBottom: 30,
-  },
-  buttonText: {
-    fontSize: 18,
-    fw: '600',
-    color: 'white',
-  },
-});
