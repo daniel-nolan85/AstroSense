@@ -11,6 +11,12 @@ const defaultTextStyles = (theme) => `
 
 const body = (theme) => `
     font-size: ${theme.fontSizes.body};
+    font-family: ${theme.fonts.body};
+`;
+
+const speech = (theme) => `
+    font-size: ${theme.fontSizes.body};
+    font-family: ${theme.fonts.heading};
 `;
 
 const hint = (theme) => `
@@ -40,6 +46,7 @@ const title = (theme) => `
 
 const variants = {
   body,
+  speech,
   label,
   caption,
   error,

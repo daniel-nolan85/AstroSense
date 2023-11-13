@@ -1,9 +1,11 @@
 import { View, Animated } from 'react-native';
 
-export const ProgressBar = ({ progress, questionsAmount }) => {
+export const ProgressBar = ({ progress, questionsAmount, progressPercent }) => {
+  const dynamicValue = `${100 / questionsAmount}%`;
+
   const progressAnim = progress.interpolate({
     inputRange: [0, questionsAmount],
-    outputRange: ['10%', '100%'],
+    outputRange: [progressPercent, '100%'],
   });
 
   return (

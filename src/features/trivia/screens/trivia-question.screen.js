@@ -14,7 +14,7 @@ const shuffleArray = (array) => {
 };
 
 export const TriviaQuestionScreen = ({ navigation, route }) => {
-  const { difficulty, duration } = route.params;
+  const { difficulty, duration, setOkTyping, setShowOk } = route.params;
 
   const [questions, setQuestions] = useState();
   const [questionNum, setQuestionNum] = useState(0);
@@ -23,6 +23,7 @@ export const TriviaQuestionScreen = ({ navigation, route }) => {
   const [options, setOptions] = useState([]);
   const [score, setScore] = useState(0);
   const [progress] = useState(new Animated.Value(0));
+  const [progressPercent, setProgressPercent] = useState('');
   const [visible, setVisible] = useState(false);
   const [correct, setCorrect] = useState(false);
 
@@ -34,6 +35,8 @@ export const TriviaQuestionScreen = ({ navigation, route }) => {
   useEffect(() => {
     if (level && questionsAmount) {
       getQuiz();
+      const pp = (100 / questionsAmount).toFixed(2) + '%';
+      setProgressPercent(pp);
     }
   }, [level, questionsAmount]);
 
@@ -97,7 +100,12 @@ export const TriviaQuestionScreen = ({ navigation, route }) => {
   };
 
   const handleFinish = () => {
-    navigate('TriviaResult', { score });
+    navigate('TriviaResult', {
+      score,
+      setOkTyping,
+      setShowOk,
+      questionsAmount,
+    });
     setTimeout(() => {
       setVisible(false);
       setCorrect(false);
@@ -108,7 +116,13 @@ export const TriviaQuestionScreen = ({ navigation, route }) => {
 
   return (
     <SafeArea style={{ flex: 1 }}>
-      <ProgressBar progress={progress} questionsAmount={questionsAmount} />
+      {progressPercent && (
+        <ProgressBar
+          progress={progress}
+          questionsAmount={questionsAmount}
+          progressPercent={progressPercent}
+        />
+      )}
       {questions && (
         <>
           <TriviaQuestionCard
@@ -126,6 +140,9 @@ export const TriviaQuestionScreen = ({ navigation, route }) => {
             correct={correct}
             questionNum={questionNum}
             questionsAmount={questionsAmount}
+            score={score}
+            correctExplanation={questions[questionNum].correctExplanation}
+            incorrectExplanation={questions[questionNum].incorrectExplanation}
           />
         </>
       )}
