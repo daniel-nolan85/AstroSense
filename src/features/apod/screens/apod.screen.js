@@ -6,29 +6,55 @@ import DatePicker, { getToday } from 'react-native-modern-datepicker';
 import { FontAwesome } from '@expo/vector-icons';
 import { SafeArea } from '../../../components/utils/safe-area.component';
 import { LoadingSpinner } from '../../../../assets/loading-spinner';
-import { Text } from '../../../components/typography/text.component';
+import { useRef } from 'react';
 import { ApodInfoCard } from '../components/apod-card.component';
+import {
+  ModalWrapper,
+  ModalView,
+  Option,
+  OptionText,
+} from '../styles/apod-modal.styles';
+import { IconsWrapper } from '../styles/apod.styles';
+import Calendar from '../../../../assets/calendar.svg';
+import Rover from '../../../../assets/rover.svg';
 
 export const ApodScreen = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState(getToday());
   const [image, setImage] = useState('');
   const [explanation, setExplanation] = useState('');
   const [title, setTitle] = useState('');
 
-  useEffect(() => {
-    const currentDate = new Date();
-    const previousDay = new Date(currentDate);
-    previousDay.setDate(currentDate.getDate() - 1);
+  const isFirstRun = useRef(true);
 
-    const formattedDate = previousDay.toISOString().slice(0, 10);
-    setDate(formattedDate);
+  useEffect(() => {
     fetchApod();
+  }, []);
+
+  useEffect(() => {
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
+    } else {
+      fetchApodByDate();
+    }
   }, [date]);
 
   const fetchApod = async () => {
-    // setIsLoading(true);
+    setIsLoading(true);
+    await axios
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`)
+      .then((res) => {
+        setIsLoading(false);
+        setImage(res.data.url);
+        setExplanation(res.data.explanation);
+        setTitle(res.data.title);
+      });
+  };
+
+  const fetchApodByDate = async () => {
+    setIsLoading(true);
     await axios
       .get(
         `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&date=${date}`
@@ -46,11 +72,8 @@ export const ApodScreen = () => {
   };
 
   const handleDateChange = (d) => {
-    const [year, month, day] = d.split('/');
-    const originalDate = new Date(year, month - 1, day);
-    const previousDay = new Date(originalDate);
-    previousDay.setDate(originalDate.getDate() - 1);
-    setDate(previousDay.toISOString().slice(0, 10));
+    const selectedDate = d.replace(/\//g, '-');
+    setDate(selectedDate);
     setOpen(!open);
   };
 
@@ -60,12 +83,17 @@ export const ApodScreen = () => {
         <LoadingSpinner />
       ) : (
         <>
-          <TouchableOpacity onPress={handleCalendar}>
-            <FontAwesome name='calendar' size={24} color='black' />
-          </TouchableOpacity>
+          <IconsWrapper>
+            <TouchableOpacity onPress={handleCalendar}>
+              <Calendar width={24} height={24} />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleCalendar}>
+              <Rover width={24} height={24} />
+            </TouchableOpacity>
+          </IconsWrapper>
           <Modal animationType='slide' transparent={true} visible={open}>
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
+            <ModalWrapper>
+              <ModalView>
                 <DatePicker
                   mode='calendar'
                   selected={date}
@@ -73,11 +101,11 @@ export const ApodScreen = () => {
                   minimumDate='1995-06-17'
                   maximumDate={getToday()}
                 />
-                <TouchableOpacity onPress={handleCalendar}>
-                  <Text>Close</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
+                <Option onPress={handleCalendar}>
+                  <OptionText>Close</OptionText>
+                </Option>
+              </ModalView>
+            </ModalWrapper>
           </Modal>
           <ApodInfoCard image={image} title={title} explanation={explanation} />
         </>
@@ -85,28 +113,3 @@ export const ApodScreen = () => {
     </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    width: '100%',
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-});

@@ -1,5 +1,9 @@
 import { Text } from '../../../components/typography/text.component';
-import { PlanetCard, PlanetCardCover, Info } from './planet-info-card.styles';
+import {
+  PlanetCard,
+  PlanetCardCover,
+  Info,
+} from '../styles/planet-info-card.styles';
 
 export const PlanetInfoCard = ({ planet }) => {
   const { name, photo, type } = planet;

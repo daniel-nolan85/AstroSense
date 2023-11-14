@@ -1,16 +1,21 @@
 import { ScrollView } from 'react-native';
 import { Text } from '../../../components/typography/text.component';
-import { ApodCard, ApodCardCover, Info } from './apod-card.styles';
+import {
+  ApodCard,
+  ApodCardCover,
+  Info,
+  Title,
+  Body,
+} from '../styles/apod-card.styles';
 
 export const ApodInfoCard = ({ image, title, explanation }) => {
-  console.log(image);
   return (
     <ApodCard elevation={5}>
       <ApodCardCover key={title} source={{ uri: image }} />
       <ScrollView>
         <Info>
-          <Text variant='title'>{title}</Text>
-          <Text variant='body'>{explanation}</Text>
+          <Title variant='title'>{title}</Title>
+          <Body variant='body'>{explanation}</Body>
         </Info>
       </ScrollView>
     </ApodCard>
