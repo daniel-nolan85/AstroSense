@@ -39,7 +39,7 @@ export const OptionContainer = styled.View`
 export const Option = styled.TouchableOpacity`
   position: relative;
   bottom: 0;
-  padding: 12px;
+  padding: ${(props) => props.theme.space[3]};
   margin: 6px;
   background-color: #009999;
   border-radius: 12px;

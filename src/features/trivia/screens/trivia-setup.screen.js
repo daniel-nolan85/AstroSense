@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { StyleSheet, TouchableOpacity, View, Image } from 'react-native';
 import TypeWriter from 'react-native-typewriter';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Text } from '../../../components/typography/text.component';
@@ -32,6 +31,18 @@ export const TriviaSetupScreen = ({ navigation }) => {
   const [showDifficulty, setShowDifficulty] = useState(false);
   const [showDuration, setShowDuration] = useState(false);
   const [showReady, setShowReady] = useState(false);
+  const [text1] = useState(
+    `Greetings, Commander! A cosmic challenge awaits you as we navigate the vast reaches of space. Our interstellar journey has encountered some celestial intricacies, and your astute mind is needed to unravel the mysteries that lie ahead.`
+  );
+  const [text2] = useState(
+    `Before we embark on this mission, you have the power to tailor your cosmic adventure. Choose your difficulty level wisely, whether you're a budding stargazer or a seasoned astrophysicist.`
+  );
+  const [text3] = useState(
+    `Next, decide the length of your journey — a brief orbit or an extended voyage through the cosmos.`
+  );
+  const [text4] = useState(
+    `Commander, with your cosmic wisdom, you've crafted a unique mission tailored to your expertise. As we prepare to delve into the wonders of the universe, your choices will guide us through the cosmos. Brace yourself for an astronomical adventure—you've shaped this cosmic journey, and the universe eagerly awaits your exploration!`
+  );
 
   const { navigate } = navigation;
 
@@ -130,12 +141,7 @@ export const TriviaSetupScreen = ({ navigation }) => {
     switch (currentStep) {
       case 1:
         return !okTyping ? (
-          <Text variant='speech'>
-            Greetings, Commander! A cosmic challenge awaits you as we navigate
-            the vast reaches of space. Our interstellar journey has encountered
-            some celestial intricacies, and your astute mind is needed to
-            unravel the mysteries that lie ahead.
-          </Text>
+          <Text variant='speech'>{text1}</Text>
         ) : (
           <TypeWriter
             typing={okTyping ? 1 : 0}
@@ -143,19 +149,12 @@ export const TriviaSetupScreen = ({ navigation }) => {
             onTypingEnd={handleTypingEndIntro}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
-            Greetings, Commander! A cosmic challenge awaits you as we navigate
-            the vast reaches of space. Our interstellar journey has encountered
-            some celestial intricacies, and your astute mind is needed to
-            unravel the mysteries that lie ahead.
+            {text1}
           </TypeWriter>
         );
       case 2:
         return !difficultyTyping ? (
-          <Text variant='speech'>
-            Before we embark on this mission, you have the power to tailor your
-            cosmic adventure. Choose your difficulty level wisely, whether
-            you're a budding stargazer or a seasoned astrophysicist.
-          </Text>
+          <Text variant='speech'>{text2}</Text>
         ) : (
           <TypeWriter
             typing={difficultyTyping ? 1 : 0}
@@ -163,17 +162,12 @@ export const TriviaSetupScreen = ({ navigation }) => {
             onTypingEnd={handleTypingEndDifficulty}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
-            Before we embark on this mission, you have the power to tailor your
-            cosmic adventure. Choose your difficulty level wisely, whether
-            you're a budding stargazer or a seasoned astrophysicist.
+            {text2}
           </TypeWriter>
         );
       case 3:
         return !durationTyping ? (
-          <Text variant='speech'>
-            Next, decide the length of your journey — a brief orbit or an
-            extended voyage through the cosmos.
-          </Text>
+          <Text variant='speech'>{text3}</Text>
         ) : (
           <TypeWriter
             typing={durationTyping ? 1 : 0}
@@ -181,19 +175,12 @@ export const TriviaSetupScreen = ({ navigation }) => {
             onTypingEnd={handleTypingEndDuration}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
-            Next, decide the length of your journey — a brief orbit or an
-            extended voyage through the cosmos.
+            {text3}
           </TypeWriter>
         );
       case 4:
         return !readyTyping ? (
-          <Text variant='speech'>
-            Commander, with your cosmic wisdom, you've crafted a unique mission
-            tailored to your expertise. As we prepare to delve into the wonders
-            of the universe, your choices will guide us through the cosmos.
-            Brace yourself for an astronomical adventure—you've shaped this
-            cosmic journey, and the universe eagerly awaits your exploration!
-          </Text>
+          <Text variant='speech'>{text4}</Text>
         ) : (
           <TypeWriter
             typing={readyTyping ? 1 : 0}
@@ -201,11 +188,7 @@ export const TriviaSetupScreen = ({ navigation }) => {
             onTypingEnd={handleTypingEndReady}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
-            Commander, with your cosmic wisdom, you've crafted a unique mission
-            tailored to your expertise. As we prepare to delve into the wonders
-            of the universe, your choices will guide us through the cosmos.
-            Brace yourself for an astronomical adventure—you've shaped this
-            cosmic journey, and the universe eagerly awaits your exploration!
+            {text4}
           </TypeWriter>
         );
       default:

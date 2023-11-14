@@ -1,14 +1,15 @@
-import {
-  StyleSheet,
-  Modal,
-  View,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
-import styled from 'styled-components/native';
+import { Modal, ScrollView } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { Text } from '../../../components/typography/text.component';
 import { SafeArea } from '../../../components/utils/safe-area.component';
+import {
+  ModalWrapper,
+  ModalView,
+  AnimationWrapper,
+  Score,
+  Explanation,
+  Option,
+  OptionText,
+} from '../styles/trivia-modal.styles';
 
 export const TriviaModal = ({
   visible,
@@ -21,72 +22,45 @@ export const TriviaModal = ({
   correctExplanation,
   incorrectExplanation,
 }) => {
-  const AnimationWrapper = styled.View`
-    width: 100%;
-    height: 40%;
-    padding: ${(props) => props.theme.space[2]};
-    margin: ${(props) => props.theme.space[2]};
-  `;
-
   return (
     <SafeArea>
-      <Modal visible={visible}>
-        <View
-          style={{
-            alignItems: 'center',
-            justifyContent: 'center',
-            flex: 1,
-          }}
-        >
-          <AnimationWrapper>
-            <LottieView
-              key='animation'
-              autoPlay
-              loop
-              resizeMode='cover'
-              source={
-                correct
-                  ? require('../../../../assets/correct.json')
-                  : require('../../../../assets/incorrect.json')
-              }
-            />
-          </AnimationWrapper>
-          <Text variant='title'>{score} points</Text>
-          <ScrollView>
-            {correct ? (
-              <Text variant='body'>{correctExplanation}</Text>
-            ) : (
-              <Text variant='body'>{incorrectExplanation}</Text>
-            )}
-            {questionNum < questionsAmount - 1 && (
-              <TouchableOpacity style={styles.button} onPress={handleNext}>
-                <Text style={styles.buttonText}>NEXT</Text>
-              </TouchableOpacity>
-            )}
-            {questionNum === questionsAmount - 1 && (
-              <TouchableOpacity onPress={handleFinish} style={styles.button}>
-                <Text style={styles.buttonText}>SHOW RESULTS</Text>
-              </TouchableOpacity>
-            )}
-          </ScrollView>
-        </View>
+      <Modal visible={visible} transparent={true} animationType='slide'>
+        <ModalWrapper>
+          <ModalView>
+            <AnimationWrapper>
+              <LottieView
+                key='animation'
+                autoPlay
+                loop
+                resizeMode='cover'
+                source={
+                  correct
+                    ? require('../../../../assets/correct.json')
+                    : require('../../../../assets/incorrect.json')
+                }
+              />
+            </AnimationWrapper>
+            <Score variant='title'>{score} points</Score>
+            <ScrollView>
+              {correct ? (
+                <Explanation variant='body'>{correctExplanation}</Explanation>
+              ) : (
+                <Explanation variant='body'>{incorrectExplanation}</Explanation>
+              )}
+              {questionNum < questionsAmount - 1 && (
+                <Option onPress={handleNext}>
+                  <OptionText>Next</OptionText>
+                </Option>
+              )}
+              {questionNum === questionsAmount - 1 && (
+                <Option onPress={handleFinish}>
+                  <OptionText>Show results</OptionText>
+                </Option>
+              )}
+            </ScrollView>
+          </ModalView>
+        </ModalWrapper>
       </Modal>
     </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: '#1a759f',
-    padding: 12,
-    paddingHorizontal: 16,
-    borderRadius: 16,
-    alignItems: 'center',
-    marginBottom: 30,
-  },
-  buttonText: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: 'white',
-  },
-});

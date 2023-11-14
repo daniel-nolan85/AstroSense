@@ -1,7 +1,13 @@
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import styled from 'styled-components/native';
 import LottieView from 'lottie-react-native';
-import { Text } from '../../../components/typography/text.component';
+import {
+  ResultsContainer,
+  AnimationWrapper,
+  Score,
+  Result,
+  Option,
+  OptionText,
+} from '../styles/trivia-result.styles';
+import { SafeArea } from '../../../components/utils/safe-area.component';
 
 export const TriviaResultScreen = ({ navigation, route }) => {
   const { navigate } = navigation;
@@ -22,71 +28,30 @@ export const TriviaResultScreen = ({ navigation, route }) => {
       ? "Well done, Commander! You've skillfully navigated the perils of our cosmic journey, demonstrating a solid understanding of the celestial realm. However, there's always room for improvement as we strive for greater cosmic knowledge. Keep exploring, and soon you'll be an unparalleled master of the universe!"
       : "Commander, it seems we've encountered a few cosmic bumps along the way, and we've crash-landed in an unknown celestial location. But fear not, even in the face of challenges, your determination to explore the universe is commendable. Ready for another attempt? The stars await your next cosmic adventure!";
 
-  const AnimationWrapper = styled.View`
-    width: 100%;
-    height: 40%;
-    padding: ${(props) => props.theme.space[2]};
-    margin: ${(props) => props.theme.space[2]};
-  `;
-
   return (
-    <View style={styles.container}>
-      <Text variant='title'>{score} points</Text>
-      <AnimationWrapper>
-        <LottieView
-          key='animation'
-          autoPlay
-          loop
-          resizeMode='cover'
-          source={resultBanner}
-        />
-      </AnimationWrapper>
-      <Text>{resultText}</Text>
-      <TouchableOpacity
-        onPress={() => {
-          setOkTyping(true);
-          setShowOk(true);
-          navigate('TriviaHome');
-        }}
-        style={styles.button}
-      >
-        <Text style={styles.buttonText}>Play Again</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeArea>
+      <ResultsContainer>
+        <Score variant='title'>You scored {score} points!</Score>
+        <AnimationWrapper>
+          <LottieView
+            key='animation'
+            autoPlay
+            loop
+            resizeMode='cover'
+            source={resultBanner}
+          />
+        </AnimationWrapper>
+        <Result variant='body'>{resultText}</Result>
+        <Option
+          onPress={() => {
+            setOkTyping(true);
+            setShowOk(true);
+            navigate('TriviaSetup');
+          }}
+        >
+          <OptionText>Play Again</OptionText>
+        </Option>
+      </ResultsContainer>
+    </SafeArea>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 40,
-    paddingHorizontal: 20,
-    height: '100%',
-  },
-  scoreValue: {
-    fontSize: 24,
-    fontWeight: '800',
-    alignSelf: 'center',
-  },
-  bannerContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-  },
-  banner: {
-    height: 300,
-    width: 300,
-  },
-  button: {
-    width: '100%',
-    backgroundColor: '#1a759f',
-    padding: 16,
-    borderRadius: 16,
-    alignItems: 'center',
-    marginBottom: 30,
-  },
-  buttonText: {
-    fontSize: 24,
-    fw: '600',
-    color: 'white',
-  },
-});
