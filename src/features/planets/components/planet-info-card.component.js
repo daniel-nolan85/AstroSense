@@ -1,21 +1,8 @@
-import { useEffect } from 'react';
-import axios from 'axios';
-import { NASA_API_KEY } from '@env';
 import { Text } from '../../../components/typography/text.component';
 import { PlanetCard, PlanetCardCover, Info } from './planet-info-card.styles';
 
 export const PlanetInfoCard = ({ planet }) => {
   const { name, photo, type } = planet;
-
-  useEffect(() => {
-    fetchApod();
-  }, []);
-
-  const fetchApod = async () => {
-    await axios.get(
-      `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`
-    );
-  };
 
   const capitalizeFirstLetter = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);

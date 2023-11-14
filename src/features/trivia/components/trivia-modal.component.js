@@ -54,9 +54,9 @@ export const TriviaModal = ({
           <Text variant='title'>{score} points</Text>
           <ScrollView>
             {correct ? (
-              <Text variant='title'>{correctExplanation}</Text>
+              <Text variant='body'>{correctExplanation}</Text>
             ) : (
-              <Text variant='title'>{incorrectExplanation}</Text>
+              <Text variant='body'>{incorrectExplanation}</Text>
             )}
             {questionNum < questionsAmount - 1 && (
               <TouchableOpacity style={styles.button} onPress={handleNext}>

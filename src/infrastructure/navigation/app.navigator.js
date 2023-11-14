@@ -5,6 +5,7 @@ import { Text } from 'react-native';
 import { SafeArea } from '../../components/utils/safe-area.component';
 import { PlanetsNavigator } from './planets.navigator';
 import { TriviaNavigator } from './trivia.navigator';
+import { ApodScreen } from '../../features/apod/screens/apod.screen';
 
 const Tab = createBottomTabNavigator();
 const { Navigator, Screen } = Tab;
@@ -16,11 +17,6 @@ const TAB_ICON = {
   Settings: 'md-settings',
 };
 
-const Apod = () => (
-  <SafeArea>
-    <Text>Apod</Text>
-  </SafeArea>
-);
 const Settings = () => (
   <SafeArea>
     <Text>Settings</Text>
@@ -43,7 +39,7 @@ const createScreenOptions = ({ route }) => {
 export const AppNavigator = () => (
   <NavigationContainer>
     <Navigator screenOptions={createScreenOptions}>
-      <Screen name='Apod' component={Apod} />
+      <Screen name='Apod' component={ApodScreen} />
       <Screen name='Planets' component={PlanetsNavigator} />
       <Screen name='Games' component={TriviaNavigator} />
       <Screen name='Settings' component={Settings} />

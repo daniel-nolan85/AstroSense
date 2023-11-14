@@ -1,13 +1,22 @@
 import { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View, Image } from 'react-native';
-import { SafeArea } from '../../../components/utils/safe-area.component';
+import TypeWriter from 'react-native-typewriter';
+import { MaterialIcons } from '@expo/vector-icons';
 import { Text } from '../../../components/typography/text.component';
 import { images } from '../../../services/trivia/trivia.data.json';
-import TypeWriter from 'react-native-typewriter';
 import { MessageBubble } from '../../../components/message-bubble.component';
-import { MaterialIcons } from '@expo/vector-icons';
+import {
+  SetupContainer,
+  SpeechContainer,
+  ImageContainer,
+  Astronaut,
+  SpeechBubble,
+  OptionContainer,
+  Option,
+  OptionText,
+} from '../styles/trivia-setup.styles';
 
-export const TriviaHomeScreen = ({ navigation }) => {
+export const TriviaSetupScreen = ({ navigation }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [difficulty, setDifficulty] = useState('');
   const [duration, setDuration] = useState(0);
@@ -124,8 +133,8 @@ export const TriviaHomeScreen = ({ navigation }) => {
           <Text variant='speech'>
             Greetings, Commander! A cosmic challenge awaits you as we navigate
             the vast reaches of space. Our interstellar journey has encountered
-            some celestial hiccups, and your astute mind is needed to unravel
-            the mysteries that lie ahead.
+            some celestial intricacies, and your astute mind is needed to
+            unravel the mysteries that lie ahead.
           </Text>
         ) : (
           <TypeWriter
@@ -136,8 +145,8 @@ export const TriviaHomeScreen = ({ navigation }) => {
           >
             Greetings, Commander! A cosmic challenge awaits you as we navigate
             the vast reaches of space. Our interstellar journey has encountered
-            some celestial hiccups, and your astute mind is needed to unravel
-            the mysteries that lie ahead.
+            some celestial intricacies, and your astute mind is needed to
+            unravel the mysteries that lie ahead.
           </TypeWriter>
         );
       case 2:
@@ -150,6 +159,7 @@ export const TriviaHomeScreen = ({ navigation }) => {
         ) : (
           <TypeWriter
             typing={difficultyTyping ? 1 : 0}
+            maxDelay={50}
             onTypingEnd={handleTypingEndDifficulty}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
@@ -167,6 +177,7 @@ export const TriviaHomeScreen = ({ navigation }) => {
         ) : (
           <TypeWriter
             typing={durationTyping ? 1 : 0}
+            maxDelay={50}
             onTypingEnd={handleTypingEndDuration}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
@@ -186,6 +197,7 @@ export const TriviaHomeScreen = ({ navigation }) => {
         ) : (
           <TypeWriter
             typing={readyTyping ? 1 : 0}
+            maxDelay={50}
             onTypingEnd={handleTypingEndReady}
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
@@ -202,172 +214,79 @@ export const TriviaHomeScreen = ({ navigation }) => {
   };
 
   return (
-    <SafeArea style={styles.questionContainer}>
-      <View style={styles.container}>
-        <View style={styles.imageContainer}>
-          <Image source={{ uri: images[0] }} style={styles.image} />
-        </View>
-        <View style={styles.messageContainer}>
+    <SetupContainer>
+      <SpeechContainer>
+        <ImageContainer>
+          <Astronaut source={{ uri: images[0] }} />
+        </ImageContainer>
+        <SpeechBubble>
           <MessageBubble mine text={renderCurrentStep()} />
-        </View>
-      </View>
-      <View style={styles.buttonContainer}>
+        </SpeechBubble>
+      </SpeechContainer>
+      <OptionContainer>
         {okButton && (
-          <TouchableOpacity style={styles.next} onPress={handleOkClick}>
-            <View>
-              <Text variant='body' style={styles.buttonText}>
-                OK
-              </Text>
-            </View>
-          </TouchableOpacity>
+          <Option onPress={handleOkClick}>
+            <OptionText variant='body'>OK</OptionText>
+          </Option>
         )}
         {difficultyButtons && (
           <>
-            <TouchableOpacity
-              style={styles.next}
-              onPress={() => handleDifficultyClick('easy')}
-            >
-              <View>
-                <Text variant='body' style={styles.buttonText}>
-                  Lunar Learner
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.next}
-              onPress={() => handleDifficultyClick('medium')}
-            >
-              <View>
-                <Text variant='body' style={styles.buttonText}>
-                  Solar Seeker
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.next}
-              onPress={() => handleDifficultyClick('hard')}
-            >
-              <View>
-                <Text variant='body' style={styles.buttonText}>
-                  Galactic Guardian
-                </Text>
-              </View>
-            </TouchableOpacity>
+            <Option onPress={() => handleDifficultyClick('easy')}>
+              <OptionText variant='body'>Lunar Learner (Easy)</OptionText>
+            </Option>
+            <Option onPress={() => handleDifficultyClick('medium')}>
+              <OptionText variant='body'>Solar Seeker (Medium)</OptionText>
+            </Option>
+            <Option onPress={() => handleDifficultyClick('hard')}>
+              <OptionText variant='body'>Galactic Guardian (Hard)</OptionText>
+            </Option>
           </>
         )}
         {durationButtons && (
           <>
-            <TouchableOpacity
-              style={styles.next}
-              onPress={() => handleDurationClick(10)}
-            >
-              <View>
-                <Text variant='body' style={styles.buttonText}>
-                  Cosmic Quickstep (10 questions)
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.next}
-              onPress={() => handleDurationClick(20)}
-            >
-              <View>
-                <Text variant='body' style={styles.buttonText}>
-                  Galaxy Quest (20 questions)
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.next}
-              onPress={() => handleDurationClick(30)}
-            >
-              <View>
-                <Text variant='body' style={styles.buttonText}>
-                  Infinity Expedition (30 questions)
-                </Text>
-              </View>
-            </TouchableOpacity>
+            <Option onPress={() => handleDurationClick(10)}>
+              <OptionText variant='body'>
+                Cosmic Quickstep (10 questions)
+              </OptionText>
+            </Option>
+            <Option onPress={() => handleDurationClick(20)}>
+              <OptionText variant='body'>
+                Galaxy Quest (20 questions)
+              </OptionText>
+            </Option>
+            <Option onPress={() => handleDurationClick(30)}>
+              <OptionText variant='body'>
+                Infinity Expedition (30 questions)
+              </OptionText>
+            </Option>
           </>
         )}
         {readyButton && (
-          <TouchableOpacity style={styles.next} onPress={handleReadyClick}>
-            <View>
-              <Text variant='body' style={styles.buttonText}>
-                Let's Go!
-              </Text>
-            </View>
-          </TouchableOpacity>
+          <Option onPress={handleReadyClick}>
+            <OptionText variant='body'>Let's Go!</OptionText>
+          </Option>
         )}
         {showOk && okTyping && (
-          <TouchableOpacity style={styles.next} onPress={skipOkText}>
-            <View>
-              <MaterialIcons name='double-arrow' size={24} color='#fff' />
-            </View>
-          </TouchableOpacity>
+          <Option onPress={skipOkText}>
+            <MaterialIcons name='double-arrow' size={20} color='#fff' />
+          </Option>
         )}
         {showDifficulty && difficultyTyping && (
-          <TouchableOpacity style={styles.next} onPress={skipDifficultyText}>
-            <View>
-              <MaterialIcons name='double-arrow' size={24} color='#fff' />
-            </View>
-          </TouchableOpacity>
+          <Option onPress={skipDifficultyText}>
+            <MaterialIcons name='double-arrow' size={20} color='#fff' />
+          </Option>
         )}
         {showDuration && durationTyping && (
-          <TouchableOpacity style={styles.next} onPress={skipDurationText}>
-            <View>
-              <MaterialIcons name='double-arrow' size={24} color='#fff' />
-            </View>
-          </TouchableOpacity>
+          <Option onPress={skipDurationText}>
+            <MaterialIcons name='double-arrow' size={20} color='#fff' />
+          </Option>
         )}
         {showReady && readyTyping && (
-          <TouchableOpacity style={styles.next} onPress={skipReadyText}>
-            <View>
-              <MaterialIcons name='double-arrow' size={24} color='#fff' />
-            </View>
-          </TouchableOpacity>
+          <Option onPress={skipReadyText}>
+            <MaterialIcons name='double-arrow' size={20} color='#fff' />
+          </Option>
         )}
-      </View>
-    </SafeArea>
+      </OptionContainer>
+    </SetupContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  questionContainer: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-  container: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: 16,
-  },
-  imageContainer: {
-    width: 100,
-  },
-  image: {
-    width: '100%',
-    height: 100,
-    resizeMode: 'cover',
-  },
-  messageContainer: {
-    flex: 1,
-    marginLeft: 8,
-    position: 'relative',
-    top: 30,
-  },
-  buttonContainer: {
-    position: 'relative',
-    bottom: 0,
-  },
-  next: {
-    padding: 12,
-    margin: 6,
-    backgroundColor: '#009999',
-    borderRadius: 12,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-  },
-});

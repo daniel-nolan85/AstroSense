@@ -7,7 +7,7 @@ import {
   Answers,
   Option,
   OptionText,
-} from './trivia-question-card.styles';
+} from '../styles/trivia-question-card.styles';
 import { SafeArea } from '../../../components/utils/safe-area.component';
 
 export const TriviaQuestionCard = ({

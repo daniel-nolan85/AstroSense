@@ -1,5 +1,5 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { TriviaHomeScreen } from '../../features/trivia/screens/trivia-home.screen';
+import { TriviaSetupScreen } from '../../features/trivia/screens/trivia-setup.screen';
 import { TriviaQuestionScreen } from '../../features/trivia/screens/trivia-question.screen';
 import { TriviaResultScreen } from '../../features/trivia/screens/trivia-result.screen';
 
@@ -13,7 +13,7 @@ export const TriviaNavigator = () => {
         headerShown: false,
       }}
     >
-      <Screen name='TriviaHome' component={TriviaHomeScreen} />
+      <Screen name='TriviaSetup' component={TriviaSetupScreen} />
       <Screen name='TriviaQuestion' component={TriviaQuestionScreen} />
       <Screen name='TriviaResult' component={TriviaResultScreen} />
     </Navigator>
