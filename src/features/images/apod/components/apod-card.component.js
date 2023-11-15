@@ -1,5 +1,4 @@
 import { ScrollView } from 'react-native';
-import { Text } from '../../../components/typography/text.component';
 import {
   ApodCard,
   ApodCardCover,

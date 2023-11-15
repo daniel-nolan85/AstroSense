@@ -1,0 +1,16 @@
+{
+  "rovers": [
+    {
+      "name": "curiosity",
+      "image": "https://res.cloudinary.com/daufzqlld/image/upload/v1699995079/curiosity_qg4dzw.jpg"
+    },
+    {
+      "name": "opportunity",
+      "image": "https://res.cloudinary.com/daufzqlld/image/upload/v1699995097/opportunity_kgl72p.jpg"
+    },
+    {
+      "name": "spirit",
+      "image": "https://res.cloudinary.com/daufzqlld/image/upload/v1699995106/spirit_vcwwk9.jpg"
+    }
+  ]
+}

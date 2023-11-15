@@ -1,12 +1,12 @@
 import { Card } from 'react-native-paper';
 import styled from 'styled-components/native';
-import { Text } from '../../../components/typography/text.component';
+import { Text } from '../../../../components/typography/text.component';
 
 export const ApodCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
   padding: ${(props) => props.theme.space[3]};
   margin: 0 ${(props) => props.theme.space[3]};
-  height: 91.5%;
+  height: 99%;
 `;
 
 export const ApodCardCover = styled.Image`

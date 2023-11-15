@@ -3,15 +3,15 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { Text } from 'react-native';
 import { SafeArea } from '../../components/utils/safe-area.component';
+import { ImagesNavigator } from './images.navigator';
 import { PlanetsNavigator } from './planets.navigator';
 import { TriviaNavigator } from './trivia.navigator';
-import { ApodScreen } from '../../features/apod/screens/apod.screen';
 
 const Tab = createBottomTabNavigator();
 const { Navigator, Screen } = Tab;
 
 const TAB_ICON = {
-  Apod: 'md-image',
+  Images: 'md-image',
   Planets: 'md-planet',
   Games: 'md-game-controller',
   Settings: 'md-settings',
@@ -39,7 +39,7 @@ const createScreenOptions = ({ route }) => {
 export const AppNavigator = () => (
   <NavigationContainer>
     <Navigator screenOptions={createScreenOptions}>
-      <Screen name='Apod' component={ApodScreen} />
+      <Screen name='Images' component={ImagesNavigator} />
       <Screen name='Planets' component={PlanetsNavigator} />
       <Screen name='Games' component={TriviaNavigator} />
       <Screen name='Settings' component={Settings} />
