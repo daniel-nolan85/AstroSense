@@ -1,48 +1,89 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
 import { Text } from 'react-native';
 import { SafeArea } from '../../components/utils/safe-area.component';
 import { ImagesNavigator } from './images.navigator';
 import { PlanetsNavigator } from './planets.navigator';
 import { TriviaNavigator } from './trivia.navigator';
+import Telescope from '../../../assets/telescope.svg';
+import TelescopeInactive from '../../../assets/telescope-inactive.svg';
+import Planets from '../../../assets/planets.svg';
+import PlanetsInactive from '../../../assets/planets-inactive.svg';
+import Joystick from '../../../assets/joystick.svg';
+import JoystickInactive from '../../../assets/joystick-inactive.svg';
+import Settings from '../../../assets/settings.svg';
+import SettingsInactive from '../../../assets/settings-inactive.svg';
 
-const Tab = createBottomTabNavigator();
-const { Navigator, Screen } = Tab;
+const { Navigator, Screen } = createBottomTabNavigator();
 
-const TAB_ICON = {
-  Images: 'md-image',
-  Planets: 'md-planet',
-  Games: 'md-game-controller',
-  Settings: 'md-settings',
-};
-
-const Settings = () => (
+const SettingsScreen = () => (
   <SafeArea>
-    <Text>Settings</Text>
+    <Text>SettingsScreen</Text>
   </SafeArea>
 );
 
-const createScreenOptions = ({ route }) => {
-  const iconName = TAB_ICON[route.name];
-  return {
-    tabBarIcon: ({ size, color }) => (
-      <Ionicons name={iconName} size={size} color={color} />
-    ),
-    headerShown: false,
-    tabBarActiveTintColor: '#660094',
-    tabBarInactiveTintColor: 'gray',
-    tabBarShowLabel: false,
-  };
-};
-
 export const AppNavigator = () => (
   <NavigationContainer>
-    <Navigator screenOptions={createScreenOptions}>
-      <Screen name='Images' component={ImagesNavigator} />
-      <Screen name='Planets' component={PlanetsNavigator} />
-      <Screen name='Games' component={TriviaNavigator} />
-      <Screen name='Settings' component={Settings} />
+    <Navigator>
+      <Screen
+        name='Images'
+        component={ImagesNavigator}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <Telescope height={32} width={32} />
+            ) : (
+              <TelescopeInactive height={32} width={32} />
+            ),
+          headerShown: false,
+          tabBarShowLabel: false,
+        }}
+      />
+      <Screen
+        name='Planets'
+        component={PlanetsNavigator}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <Planets height={32} width={32} />
+            ) : (
+              <PlanetsInactive height={32} width={32} />
+            ),
+          headerShown: false,
+
+          tabBarShowLabel: false,
+        }}
+      />
+      <Screen
+        name='Games'
+        component={TriviaNavigator}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <Joystick height={32} width={32} />
+            ) : (
+              <JoystickInactive height={32} width={32} />
+            ),
+          headerShown: false,
+
+          tabBarShowLabel: false,
+        }}
+      />
+      <Screen
+        name='Settings'
+        component={SettingsScreen}
+        options={{
+          tabBarIcon: ({ focused }) =>
+            focused ? (
+              <Settings height={32} width={32} />
+            ) : (
+              <SettingsInactive height={32} width={32} />
+            ),
+          headerShown: false,
+
+          tabBarShowLabel: false,
+        }}
+      />
     </Navigator>
   </NavigationContainer>
 );

@@ -2,8 +2,8 @@ import {
   createStackNavigator,
   TransitionPresets,
 } from '@react-navigation/stack';
-import { MarsRoverScreen } from '../../features/images/rover/screens/mars-rover.screen';
 import { MarsRoverImagesScreen } from '../../features/images/rover/screens/mars-rover-images.screen';
+import { MarsRoverImagesSetupScreen } from '../../features/images/rover/screens/mars-rover-images-setup.screen';
 
 const RoverStack = createStackNavigator();
 const { Navigator, Screen } = RoverStack;
@@ -16,8 +16,11 @@ export const MarsRoverNavigator = () => {
         headerShown: false,
       }}
     >
-      <Screen name='MarsRoverScreen' component={MarsRoverScreen} />
-      <Screen name='MarsRoverImages' component={MarsRoverImagesScreen} />
+      <Screen
+        name='MarsRoverImagesSetup'
+        component={MarsRoverImagesSetupScreen}
+      />
+      <Screen name='MarsRoverImagesScreen' component={MarsRoverImagesScreen} />
     </Navigator>
   );
 };

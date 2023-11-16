@@ -10,7 +10,7 @@ import {
 } from '@expo-google-fonts/questrial';
 import { theme } from './src/infrastructure/theme';
 import { PlanetsContextProvider } from './src/services/planets/planets.context';
-import { ApodContextProvider } from './src/services/images/apod/apod.context';
+import { ImagesContextProvider } from './src/services/images/images.context';
 import { Navigation } from './src/infrastructure/navigation';
 
 export default function App() {
@@ -22,9 +22,9 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <PlanetsContextProvider>
-          <ApodContextProvider>
+          <ImagesContextProvider>
             <Navigation />
-          </ApodContextProvider>
+          </ImagesContextProvider>
         </PlanetsContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style='auto' />

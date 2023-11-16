@@ -1,10 +1,12 @@
 import styled from 'styled-components/native';
-import { Text } from '../../../components/typography/text.component';
-import { SafeArea } from '../../../components/utils/safe-area.component';
+import { Text } from '../../../../components/typography/text.component';
+import { SafeArea } from '../../../../components/utils/safe-area.component';
 
-export const SetupContainer = styled(SafeArea)`
+export const SetupSafeArea = styled(SafeArea)`
   flex: 1;
-  flex-direction: column;
+`;
+
+export const SetupContainer = styled.View`
   justify-content: space-between;
 `;
 

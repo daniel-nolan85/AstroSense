@@ -1,8 +1,11 @@
 import { useState, useEffect, useRef, useContext } from 'react';
-import { Modal } from 'react-native';
+import { Modal, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 import { NASA_API_KEY } from '@env';
 import DatePicker, { getToday } from 'react-native-modern-datepicker';
+import { DrawerActions } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+import Calendar from '../../../../../assets/calendar.svg';
 import { SafeArea } from '../../../../components/utils/safe-area.component';
 import { LoadingSpinner } from '../../../../../assets/loading-spinner';
 import { ApodInfoCard } from '../components/apod-card.component';
@@ -12,9 +15,10 @@ import {
   Option,
   OptionText,
 } from '../styles/apod-modal.styles';
-import { ApodContext } from '../../../../services/images/apod/apod.context';
+import { ApodSafeArea, IconsWrapper } from '../styles/apod.styles';
 
-export const ApodScreen = () => {
+export const ApodScreen = ({ navigation }) => {
+  const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [date, setDate] = useState(getToday());
   const [image, setImage] = useState('');
@@ -22,8 +26,6 @@ export const ApodScreen = () => {
   const [title, setTitle] = useState('');
 
   const isFirstRun = useRef(true);
-
-  const { open, setOpen } = useContext(ApodContext);
 
   useEffect(() => {
     fetchApod();
@@ -64,6 +66,10 @@ export const ApodScreen = () => {
       });
   };
 
+  const handleCalendar = () => {
+    setOpen(!open);
+  };
+
   const handleDateChange = (d) => {
     const selectedDate = d.replace(/\//g, '-');
     setDate(selectedDate);
@@ -71,11 +77,23 @@ export const ApodScreen = () => {
   };
 
   return (
-    <SafeArea>
+    <ApodSafeArea>
       {isLoading ? (
         <LoadingSpinner />
       ) : (
         <>
+          <IconsWrapper>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.dispatch(DrawerActions.openDrawer());
+              }}
+            >
+              <Ionicons name='md-menu' size={30} color='#009999' />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={handleCalendar}>
+              <Calendar width={24} height={24} />
+            </TouchableOpacity>
+          </IconsWrapper>
           <Modal animationType='slide' transparent={true} visible={open}>
             <ModalWrapper>
               <ModalView>
@@ -86,7 +104,7 @@ export const ApodScreen = () => {
                   minimumDate='1995-06-17'
                   maximumDate={getToday()}
                 />
-                <Option onPress={() => setOpen(!open)}>
+                <Option onPress={handleCalendar}>
                   <OptionText>Close</OptionText>
                 </Option>
               </ModalView>
@@ -95,6 +113,6 @@ export const ApodScreen = () => {
           <ApodInfoCard image={image} title={title} explanation={explanation} />
         </>
       )}
-    </SafeArea>
+    </ApodSafeArea>
   );
 };

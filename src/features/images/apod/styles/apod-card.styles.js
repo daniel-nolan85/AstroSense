@@ -6,7 +6,7 @@ export const ApodCard = styled(Card)`
   background-color: ${(props) => props.theme.colors.bg.primary};
   padding: ${(props) => props.theme.space[3]};
   margin: 0 ${(props) => props.theme.space[3]};
-  height: 99%;
+  height: 90%;
 `;
 
 export const ApodCardCover = styled.Image`
