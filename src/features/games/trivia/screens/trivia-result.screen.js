@@ -7,7 +7,7 @@ import {
   Option,
   OptionText,
 } from '../styles/trivia-result.styles';
-import { SafeArea } from '../../../components/utils/safe-area.component';
+import { SafeArea } from '../../../../components/utils/safe-area.component';
 
 export const TriviaResultScreen = ({ navigation, route }) => {
   const { navigate } = navigation;
@@ -17,10 +17,10 @@ export const TriviaResultScreen = ({ navigation, route }) => {
   const scorePercentage = (score / maxPossibleScore) * 100;
   const resultBanner =
     scorePercentage === 100
-      ? require('../../../../assets/landed.json')
+      ? require('../../../../../assets/landed.json')
       : scorePercentage < 100 && scorePercentage > 40
-      ? require('../../../../assets/flying.json')
-      : require('../../../../assets/crash.json');
+      ? require('../../../../../assets/flying.json')
+      : require('../../../../../assets/crash.json');
   const resultText =
     scorePercentage === 100
       ? "Outstanding, Commander! You've successfully completed your cosmic mission with flying colors. Your knowledge of the universe is unparalleled, and you've proven yourself as a true cosmic explorer. The stars themselves applaud your stellar achievements. Until our next cosmic adventure, revel in the cosmic glory you've earned!"

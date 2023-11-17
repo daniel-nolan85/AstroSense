@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import TypeWriter from 'react-native-typewriter';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Text } from '../../../components/typography/text.component';
-import { images } from '../../../services/trivia/trivia.data.json';
-import { MessageBubble } from '../../../components/message-bubble.component';
+import { Text } from '../../../../components/typography/text.component';
+import { images } from '../../../../services/trivia/trivia.data.json';
+import { MessageBubble } from '../../../../components/message-bubble.component';
 import {
   SetupContainer,
   SpeechContainer,

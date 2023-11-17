@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Animated, View } from 'react-native';
-import data from '../../../services/trivia/trivia.data.json';
-import { SafeArea } from '../../../components/utils/safe-area.component';
+import { Animated } from 'react-native';
+import data from '../../../../services/trivia/trivia.data.json';
+import { SafeArea } from '../../../../components/utils/safe-area.component';
 import { TriviaQuestionCard } from '../components/trivia-question-card.component';
 import { ProgressBar } from '../components/trivia-progress-bar.component';
 import { TriviaModal } from '../components/trivia-modal.component';

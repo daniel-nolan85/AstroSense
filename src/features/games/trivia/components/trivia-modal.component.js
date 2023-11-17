@@ -1,6 +1,6 @@
 import { Modal, ScrollView } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { SafeArea } from '../../../components/utils/safe-area.component';
+import { SafeArea } from '../../../../components/utils/safe-area.component';
 import {
   ModalWrapper,
   ModalView,
@@ -35,8 +35,8 @@ export const TriviaModal = ({
                 resizeMode='cover'
                 source={
                   correct
-                    ? require('../../../../assets/correct.json')
-                    : require('../../../../assets/incorrect.json')
+                    ? require('../../../../../assets/correct.json')
+                    : require('../../../../../assets/incorrect.json')
                 }
               />
             </AnimationWrapper>

@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 import { SafeArea } from '../../components/utils/safe-area.component';
 import { ImagesNavigator } from './images.navigator';
 import { PlanetsNavigator } from './planets.navigator';
-import { TriviaNavigator } from './trivia.navigator';
+import { GamesNavigator } from './games.navigator';
 import Telescope from '../../../assets/telescope.svg';
 import TelescopeInactive from '../../../assets/telescope-inactive.svg';
 import Planets from '../../../assets/planets.svg';
@@ -56,7 +56,7 @@ export const AppNavigator = () => (
       />
       <Screen
         name='Games'
-        component={TriviaNavigator}
+        component={GamesNavigator}
         options={{
           tabBarIcon: ({ focused }) =>
             focused ? (

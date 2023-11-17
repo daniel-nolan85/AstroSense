@@ -1,5 +1,5 @@
 import { ScrollView } from 'react-native';
-import { Text } from '../../../components/typography/text.component';
+import { Text } from '../../../../components/typography/text.component';
 import {
   QuestionCard,
   QuestionCardCover,
@@ -8,7 +8,7 @@ import {
   Option,
   OptionText,
 } from '../styles/trivia-question-card.styles';
-import { SafeArea } from '../../../components/utils/safe-area.component';
+import { SafeArea } from '../../../../components/utils/safe-area.component';
 
 export const TriviaQuestionCard = ({
   question,
