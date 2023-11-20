@@ -34,8 +34,6 @@ export const AstroAviatorSetupScreen = ({ navigation }) => {
     `Prepare for lift-off, Commander, and may your reflexes be as swift as the speed of light. The universe awaits your daring exploits in this thrilling space odyssey!`
   );
 
-  console.log('currentStep => ', currentStep);
-
   const { navigate } = navigation;
 
   const skipText = () => {

@@ -10,6 +10,7 @@ import {
   StatsTitle,
   StatsItem,
 } from '../styles/planet-details.styles';
+
 const { Accordion, Icon } = List;
 
 export const PlanetDetailsScreen = ({ route }) => {
@@ -40,7 +41,7 @@ export const PlanetDetailsScreen = ({ route }) => {
           expanded={descExpanded}
           onPress={() => setDescExpanded(!descExpanded)}
         >
-          <Description>{description}</Description>
+          <Description variant='body'>{description}</Description>
         </Accordion>
         <Accordion
           title='Stats'
@@ -51,56 +52,62 @@ export const PlanetDetailsScreen = ({ route }) => {
           <StatsWrapper>
             {avgDistFromSun && (
               <StatsContainer>
-                <StatsTitle>Average distance from the sun:</StatsTitle>
-                <StatsItem>{avgDistFromSun[0]}</StatsItem>
+                <StatsTitle variant='body'>
+                  Average distance from the sun:
+                </StatsTitle>
+                <StatsItem variant='body'>{avgDistFromSun[0]}</StatsItem>
               </StatsContainer>
             )}
             {diameter && (
               <StatsContainer>
-                <StatsTitle>Diameter:</StatsTitle>
-                <StatsItem>{diameter[0]}</StatsItem>
+                <StatsTitle variant='body'>Diameter:</StatsTitle>
+                <StatsItem variant='body'>{diameter[0]}</StatsItem>
               </StatsContainer>
             )}
             {dayDuration && (
               <StatsContainer>
-                <StatsTitle>Time to rotate on axis (a day):</StatsTitle>
-                <StatsItem>{dayDuration}</StatsItem>
+                <StatsTitle variant='body'>
+                  Time to rotate on axis (a day):
+                </StatsTitle>
+                <StatsItem variant='body'>{dayDuration}</StatsItem>
               </StatsContainer>
             )}
             {yearDuration && (
               <StatsContainer>
-                <StatsTitle>Time to orbit the sun (a year):</StatsTitle>
-                <StatsItem>{yearDuration}</StatsItem>
+                <StatsTitle variant='body'>
+                  Time to orbit the sun (a year):
+                </StatsTitle>
+                <StatsItem variant='body'>{yearDuration}</StatsItem>
               </StatsContainer>
             )}
             {gravity && (
               <StatsContainer>
-                <StatsTitle>Gravity:</StatsTitle>
-                <StatsItem>{gravity}</StatsItem>
+                <StatsTitle variant='body'>Gravity:</StatsTitle>
+                <StatsItem variant='body'>{gravity}</StatsItem>
               </StatsContainer>
             )}
             {avgTemp && (
               <StatsContainer>
-                <StatsTitle>Average temperature:</StatsTitle>
-                <StatsItem>{avgTemp[0]}</StatsItem>
+                <StatsTitle variant='body'>Average temperature:</StatsTitle>
+                <StatsItem variant='body'>{avgTemp[0]}</StatsItem>
               </StatsContainer>
             )}
             {atmosphere && (
               <StatsContainer>
-                <StatsTitle>Contents of atmosphere:</StatsTitle>
-                <StatsItem>{atmosphere}</StatsItem>
+                <StatsTitle variant='body'>Contents of atmosphere:</StatsTitle>
+                <StatsItem variant='body'>{atmosphere}</StatsItem>
               </StatsContainer>
             )}
             {yearDiscovered && (
               <StatsContainer>
-                <StatsTitle>Year of discovery:</StatsTitle>
-                <StatsItem>{yearDiscovered}</StatsItem>
+                <StatsTitle variant='body'>Year of discovery:</StatsTitle>
+                <StatsItem variant='body'>{yearDiscovered}</StatsItem>
               </StatsContainer>
             )}
             {numMoons && (
               <StatsContainer>
-                <StatsTitle>Number of known moons:</StatsTitle>
-                <StatsItem>{numMoons}</StatsItem>
+                <StatsTitle variant='body'>Number of known moons:</StatsTitle>
+                <StatsItem variant='body'>{numMoons}</StatsItem>
               </StatsContainer>
             )}
           </StatsWrapper>
