@@ -1,5 +1,5 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { DragAndDropNavigator } from './drag-and-drop.navigator';
+import { InterstellarAssemblyNavigator } from './interstellar-assembly.navigator';
 import { AstroAviatorNavigator } from './astro-aviator.navigator';
 import { TriviaNavigator } from './trivia.navigator';
 
@@ -9,8 +9,8 @@ export const GamesNavigator = () => {
   return (
     <Navigator>
       <Screen
-        name='DragAndDrop'
-        component={DragAndDropNavigator}
+        name='InterstellarAssembly'
+        component={InterstellarAssemblyNavigator}
         options={{
           headerShown: false,
           drawerLabel: 'Drag & Drop',

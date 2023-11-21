@@ -16,26 +16,20 @@ import {
   OptionContainer,
   Option,
   OptionText,
-} from '../styles/astro-aviator-setup.styles';
-import { IconsWrapper } from '../styles/astro-aviator.styles';
+} from '../styles/interstellar-assembly-setup.styles';
+import { IconsWrapper } from '../styles/interstellar-assembly.styles';
 
-export const AstroAviatorSetupScreen = ({ navigation }) => {
+export const InterstellarAssemblySetupScreen = ({ navigation }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [okButton, setOkButton] = useState(false);
   const [readyButton, setReadyButton] = useState(false);
   const [typing, setTyping] = useState(true);
   const [showOk, setShowOk] = useState(true);
   const [text1] = useState(
-    `Attention, Brave Space Explorer! Prepare for a daring journey as we navigate through a treacherous meteor shower. Only the most skilled and fearless Astro Aviators can successfully navigate through the celestial obstacles that lie ahead.`
+    `Welcome, Space Explorer, to a cosmic challenge like no other — 'Interstellar Assembly.' Prepare to embark on an interstellar journey where your wits and creativity will be put to the test. In this cosmic puzzle adventure, you have the unique opportunity to arrange planets, match moons to their celestial hosts, and assemble the wonders of the universe with a simple drag and drop.`
   );
   const [text2] = useState(
-    `Tap the screen to propel your spaceship upwards, defying gravity and guiding your spaceship through the meteor storm. Your bravery will be tested as you soar through the stars, avoiding collisions with looming asteroids and the unforgiving cosmic floor.`
-  );
-  const [text3] = useState(
-    `Each successful passage through this perilous journey earns you points, bringing you one step closer to becoming the ultimate Astro Aviator. But be vigilant! A single collision could spell the end of your cosmic adventure.`
-  );
-  const [text4] = useState(
-    `Prepare for lift-off, Commander, and may your reflexes be as swift as the speed of light. The universe awaits your daring exploits in this thrilling space odyssey!`
+    `Brace yourself for an odyssey of celestial proportions as you explore the intricacies of our vast cosmos. The stars await your arrangement, and the galaxies beckon your strategic mind. Get ready to be the architect of your cosmic adventure — the 'Interstellar Assembly' begins now!`
   );
 
   const { navigate, dispatch } = navigation;
@@ -43,7 +37,7 @@ export const AstroAviatorSetupScreen = ({ navigation }) => {
   const skipText = () => {
     setShowOk(false);
     setTyping(false);
-    if (currentStep < 4) {
+    if (currentStep < 2) {
       setOkButton(true);
     } else {
       setReadyButton(true);
@@ -53,7 +47,7 @@ export const AstroAviatorSetupScreen = ({ navigation }) => {
   const handleTypingEnd = () => {
     setShowOk(false);
     setTyping(true);
-    if (currentStep < 4) {
+    if (currentStep < 2) {
       setOkButton(true);
     } else {
       setReadyButton(true);
@@ -70,7 +64,7 @@ export const AstroAviatorSetupScreen = ({ navigation }) => {
   const handleReadyClick = () => {
     setCurrentStep(1);
     setOkButton(false);
-    navigate('AstroAviatorGame');
+    navigate('InterstellarAssemblyGame');
   };
 
   const renderCurrentStep = () => {
@@ -99,32 +93,6 @@ export const AstroAviatorSetupScreen = ({ navigation }) => {
             style={{ fontFamily: 'Audiowide_400Regular' }}
           >
             {text2}
-          </TypeWriter>
-        );
-      case 3:
-        return !typing ? (
-          <Text variant='speech'>{text3}</Text>
-        ) : (
-          <TypeWriter
-            typing={typing ? 1 : 0}
-            maxDelay={50}
-            onTypingEnd={handleTypingEnd}
-            style={{ fontFamily: 'Audiowide_400Regular' }}
-          >
-            {text3}
-          </TypeWriter>
-        );
-      case 4:
-        return !typing ? (
-          <Text variant='speech'>{text4}</Text>
-        ) : (
-          <TypeWriter
-            typing={typing ? 1 : 0}
-            maxDelay={50}
-            onTypingEnd={handleTypingEnd}
-            style={{ fontFamily: 'Audiowide_400Regular' }}
-          >
-            {text4}
           </TypeWriter>
         );
       default:

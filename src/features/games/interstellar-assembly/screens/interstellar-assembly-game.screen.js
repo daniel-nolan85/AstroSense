@@ -19,8 +19,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { DrawerActions } from '@react-navigation/native';
 import { shuffleArray } from '../utils';
 import { LoadingSpinner } from '../../../../../assets/loading-spinner';
-import { IconsWrapper } from '../styles/drag-and-drop.styles';
-import { DragAndDropModal } from '../components/drag-and-drop-modal.component';
+import { IconsWrapper } from '../styles/interstellar-assembly.styles';
+import { InterstellarAssemblyModal } from '../components/interstellar-assembly-modal.component';
 
 const imageUrls = [
   'https://res.cloudinary.com/daufzqlld/image/upload/v1700514767/mercury-nobg_e72zse.png',
@@ -33,7 +33,7 @@ const imageUrls = [
   'https://res.cloudinary.com/daufzqlld/image/upload/v1700514823/neptune-nobg_ff5xit.png',
 ];
 
-export const DragAndDropGameScreen = ({ navigation }) => {
+export const InterstellarAssemblyGameScreen = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isGameWon, setIsGameWon] = useState(false);
   const [currentOrderArray, setCurrentOrderArray] = useState([]);
@@ -74,7 +74,7 @@ export const DragAndDropGameScreen = ({ navigation }) => {
     }, 5);
   };
 
-  const { dispatch, navigate } = navigation;
+  const { dispatch } = navigation;
 
   return (
     <ImageBackground
@@ -116,7 +116,7 @@ export const DragAndDropGameScreen = ({ navigation }) => {
           </GestureHandlerRootView>
         )}
         {isGameWon && (
-          <DragAndDropModal
+          <InterstellarAssemblyModal
             handlePlayAgain={handlePlayAgain}
             isGameWon={isGameWon}
           />

@@ -2,7 +2,11 @@ import styled from 'styled-components/native';
 import { Text } from '../../../../components/typography/text.component';
 import { SafeArea } from '../../../../components/utils/safe-area.component';
 
-export const SetupContainer = styled(SafeArea)`
+export const SetupSafeArea = styled(SafeArea)`
+  flex: 1;
+`;
+
+export const SetupContainer = styled.View`
   flex: 1;
   flex-direction: column;
   justify-content: space-between;

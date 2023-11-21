@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
 import { GameEngine } from 'react-native-game-engine';
 import { TouchableOpacity, View, ImageBackground } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { DrawerActions } from '@react-navigation/native';
 import { restart } from '../entities';
 import { Physics } from '../physics';
 import { SafeArea } from '../../../../components/utils/safe-area.component';
 import { Text } from '../../../../components/typography/text.component';
 import { LoadingSpinner } from '../../../../../assets/loading-spinner';
+import { IconsWrapper } from '../styles/astro-aviator.styles';
 
-export const AstroAviatorGameScreen = () => {
+export const AstroAviatorGameScreen = ({ navigation }) => {
   const [running, setRunning] = useState(false);
   const [gameEngine, setGameEngine] = useState(null);
   const [currentPoints, setCurrentPoints] = useState(-1);
@@ -16,6 +19,8 @@ export const AstroAviatorGameScreen = () => {
   useEffect(() => {
     setRunning(false);
   }, []);
+
+  const { dispatch } = navigation;
 
   return (
     <ImageBackground
@@ -33,6 +38,15 @@ export const AstroAviatorGameScreen = () => {
             flex: 1,
           }}
         >
+          <IconsWrapper>
+            <TouchableOpacity
+              onPress={() => {
+                dispatch(DrawerActions.openDrawer());
+              }}
+            >
+              <Ionicons name='md-menu' size={30} color='#009999' />
+            </TouchableOpacity>
+          </IconsWrapper>
           {currentPoints > 0 && (
             <Text
               variant='title'

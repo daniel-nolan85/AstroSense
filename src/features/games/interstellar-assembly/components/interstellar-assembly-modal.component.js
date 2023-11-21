@@ -8,10 +8,9 @@ import {
   Congratulations,
   Option,
   OptionText,
-} from '../styles/drag-and-drop-modal.styles';
-import { Text } from '../../../../components/typography/text.component';
+} from '../styles/interstellar-assembly-modal.styles';
 
-export const DragAndDropModal = ({ handlePlayAgain, isGameWon }) => {
+export const InterstellarAssemblyModal = ({ handlePlayAgain, isGameWon }) => {
   return (
     <SafeArea>
       <Modal visible={isGameWon} transparent={true} animationType='slide'>
