@@ -5,8 +5,7 @@ import {
 import { PlanetsScreen } from '../../features/planets/screens/planets.screen';
 import { PlanetDetailsScreen } from '../../features/planets/screens/planet-details.screen';
 
-const PlanetStack = createStackNavigator();
-const { Navigator, Screen } = PlanetStack;
+const { Navigator, Screen } = createStackNavigator();
 
 export const PlanetsNavigator = () => {
   return (

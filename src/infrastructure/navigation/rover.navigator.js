@@ -5,8 +5,7 @@ import {
 import { MarsRoverImagesScreen } from '../../features/images/rover/screens/mars-rover-images.screen';
 import { MarsRoverImagesSetupScreen } from '../../features/images/rover/screens/mars-rover-images-setup.screen';
 
-const RoverStack = createStackNavigator();
-const { Navigator, Screen } = RoverStack;
+const { Navigator, Screen } = createStackNavigator();
 
 export const MarsRoverNavigator = () => {
   return (

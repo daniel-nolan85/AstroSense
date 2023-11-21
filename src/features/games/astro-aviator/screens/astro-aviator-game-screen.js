@@ -72,7 +72,7 @@ export const AstroAviatorGameScreen = () => {
               bottom: 0,
             }}
           ></GameEngine>
-          {!running ? (
+          {!running && (
             <View
               style={{
                 flex: 1,
@@ -85,7 +85,7 @@ export const AstroAviatorGameScreen = () => {
                   backgroundColor: '#009999',
                   paddingHorizontal: 30,
                   paddingVertical: 10,
-                  borderRadius: '12px',
+                  borderRadius: 12,
                 }}
                 onPress={() => {
                   setCurrentPoints(-1);
@@ -101,7 +101,7 @@ export const AstroAviatorGameScreen = () => {
                 </Text>
               </TouchableOpacity>
             </View>
-          ) : null}
+          )}
         </SafeArea>
       )}
     </ImageBackground>

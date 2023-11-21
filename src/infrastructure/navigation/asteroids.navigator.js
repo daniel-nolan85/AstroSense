@@ -5,8 +5,7 @@ import {
 import { AsteroidsListScreen } from '../../features/images/asteroids/screens/asteroids-list.screen';
 import { AsteroidsDetailsScreen } from '../../features/images/asteroids/screens/asteroids-details.screen';
 
-const RoverStack = createStackNavigator();
-const { Navigator, Screen } = RoverStack;
+const { Navigator, Screen } = createStackNavigator();
 
 export const AsteroidsNavigator = () => {
   return (

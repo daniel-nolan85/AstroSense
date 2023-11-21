@@ -4,8 +4,7 @@ import { MarsRoverNavigator } from './rover.navigator';
 import { LandsatHomeScreen } from '../../features/images/landsat/screens/landsat-home.screen';
 import { AsteroidsNavigator } from './asteroids.navigator';
 
-const Drawer = createDrawerNavigator();
-const { Navigator, Screen } = Drawer;
+const { Navigator, Screen } = createDrawerNavigator();
 
 export const ImagesNavigator = () => {
   return (

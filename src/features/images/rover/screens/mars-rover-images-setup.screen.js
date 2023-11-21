@@ -89,7 +89,7 @@ export const MarsRoverImagesSetupScreen = ({ navigation }) => {
       });
   };
 
-  const { navigate } = navigation;
+  const { navigate, dispatch } = navigation;
 
   const skipRoverText = () => {
     setShowRover(false);
@@ -275,7 +275,7 @@ export const MarsRoverImagesSetupScreen = ({ navigation }) => {
       <IconsWrapper>
         <TouchableOpacity
           onPress={() => {
-            navigation.dispatch(DrawerActions.openDrawer());
+            dispatch(DrawerActions.openDrawer());
           }}
         >
           <Ionicons name='md-menu' size={30} color='#009999' />

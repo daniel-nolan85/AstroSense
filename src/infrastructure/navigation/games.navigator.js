@@ -1,25 +1,37 @@
-import { createStackNavigator } from '@react-navigation/stack';
-import { TriviaSetupScreen } from '../../features/games/trivia/screens/trivia-setup.screen';
-import { TriviaQuestionScreen } from '../../features/games/trivia/screens/trivia-question.screen';
-import { TriviaResultScreen } from '../../features/games/trivia/screens/trivia-result.screen';
-import { AstroAviatorSetupScreen } from '../../features/games/astro-aviator/screens/astro-aviator-setup-screen';
-import { AstroAviatorGameScreen } from '../../features/games/astro-aviator/screens/astro-aviator-game-screen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { DragAndDropNavigator } from './drag-and-drop.navigator';
+import { AstroAviatorNavigator } from './astro-aviator.navigator';
+import { TriviaNavigator } from './trivia.navigator';
 
-const PlanetStack = createStackNavigator();
-const { Navigator, Screen } = PlanetStack;
+const { Navigator, Screen } = createDrawerNavigator();
 
 export const GamesNavigator = () => {
   return (
-    <Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Screen name='AstroAviatorSetup' component={AstroAviatorSetupScreen} />
-      <Screen name='AstroAviatorGame' component={AstroAviatorGameScreen} />
-      <Screen name='TriviaSetup' component={TriviaSetupScreen} />
-      <Screen name='TriviaQuestion' component={TriviaQuestionScreen} />
-      <Screen name='TriviaResult' component={TriviaResultScreen} />
+    <Navigator>
+      <Screen
+        name='DragAndDrop'
+        component={DragAndDropNavigator}
+        options={{
+          headerShown: false,
+          drawerLabel: 'Drag & Drop',
+        }}
+      />
+      <Screen
+        name='AstroAviator'
+        component={AstroAviatorNavigator}
+        options={{
+          headerShown: false,
+          drawerLabel: 'Astro Aviator',
+        }}
+      />
+      <Screen
+        name='TriviaAviator'
+        component={TriviaNavigator}
+        options={{
+          headerShown: false,
+          drawerLabel: 'Trivia',
+        }}
+      />
     </Navigator>
   );
 };
