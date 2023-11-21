@@ -13,21 +13,21 @@ import {
   AsteroidCard,
   AsteroidHeaderCard,
   AsteroidDetailsCard,
-} from '../styles/asteroid-info-card.styles';
+} from '../styles/asteroid-almanac-info-card.styles';
 import {
   CardWrapper,
   StatsWrapper,
   StatsContainer,
   StatsTitle,
   StatsItem,
-} from '../styles/asteroid-details.styles';
+} from '../styles/asteroid-almanac-details.styles';
 import Size from '../../../../../assets/size.svg';
 import Performance from '../../../../../assets/performance.svg';
 import Radar from '../../../../../assets/radar.svg';
 
 const { Accordion, Icon } = List;
 
-export const AsteroidsDetailsScreen = ({ route }) => {
+export const AsteroidAlmanacDetailsScreen = ({ route }) => {
   const [cardExpanded, setCardExpanded] = useState(false);
   const [sizeExpanded, setSizeExpanded] = useState(false);
   const [speedExpanded, setSpeedExpanded] = useState(false);

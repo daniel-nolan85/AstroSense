@@ -2,7 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { ApodScreen } from '../../features/images/apod/screens/apod.screen';
 import { MarsRoverNavigator } from './rover.navigator';
 import { LandsatHomeScreen } from '../../features/images/landsat/screens/landsat-home.screen';
-import { AsteroidsNavigator } from './asteroids.navigator';
+import { AsteroidAlmanacNavigator } from './asteroid-almanac.navigator';
 
 const { Navigator, Screen } = createDrawerNavigator();
 
@@ -34,11 +34,11 @@ export const ImagesNavigator = () => {
         }}
       />
       <Screen
-        name='Asteroids'
-        component={AsteroidsNavigator}
+        name='AsteroidAlmanac'
+        component={AsteroidAlmanacNavigator}
         options={{
           headerShown: false,
-          drawerLabel: 'Asteroids',
+          drawerLabel: 'Asteroid Almanac',
         }}
       />
     </Navigator>

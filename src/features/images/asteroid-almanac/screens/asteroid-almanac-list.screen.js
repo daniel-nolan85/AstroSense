@@ -6,13 +6,13 @@ import { NASA_API_KEY } from '@env';
 import { SafeArea } from '../../../../components/utils/safe-area.component';
 import { Spacer } from '../../../../components/spacer/spacer.component';
 import { LoadingSpinner } from '../../../../../assets/loading-spinner';
-import { AsteroidInfoCard } from '../components/asteroids-info-card.component';
+import { AsteroidAlmanacInfoCard } from '../components/asteroid-almanac-info-card.component';
 
 const AsteroidList = styled.FlatList.attrs({
   contentContainerStyle: { padding: 16 },
 })``;
 
-export const AsteroidsListScreen = ({ navigation }) => {
+export const AsteroidAlmanacListScreen = ({ navigation, route }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [count, setCount] = useState(0);
   const [asteroids, setAsteroids] = useState([]);
@@ -22,12 +22,14 @@ export const AsteroidsListScreen = ({ navigation }) => {
   }, []);
 
   const fetchAsteroids = async () => {
+    console.log('fetching');
     setIsLoading(true);
     await axios
       .get(
-        `https://api.nasa.gov/neo/rest/v1/feed?start_date=2023-11-10&end_date=2023-11-13&api_key=${NASA_API_KEY}`
+        `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&api_key=${NASA_API_KEY}`
       )
       .then((res) => {
+        console.log(res.data);
         setIsLoading(false);
         setCount(res.data.element_count);
         const asteroidsArray = Object.entries(res.data.near_earth_objects);
@@ -37,6 +39,7 @@ export const AsteroidsListScreen = ({ navigation }) => {
   };
 
   const { navigate } = navigation;
+  const { date } = route.params;
 
   return (
     <SafeArea>
@@ -58,7 +61,7 @@ export const AsteroidsListScreen = ({ navigation }) => {
                   }}
                 >
                   <Spacer position='bottom' size='large'>
-                    <AsteroidInfoCard date={date} />
+                    <AsteroidAlmanacInfoCard date={date} />
                   </Spacer>
                 </TouchableOpacity>
               );

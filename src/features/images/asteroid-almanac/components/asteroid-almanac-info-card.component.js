@@ -1,8 +1,8 @@
 import { Text } from '../../../../components/typography/text.component';
 import { LinearGradient } from 'expo-linear-gradient';
-import { AsteroidCard } from '../styles/asteroid-info-card.styles';
+import { AsteroidCard } from '../styles/asteroid-almanac-info-card.styles';
 
-export const AsteroidInfoCard = ({ date }) => {
+export const AsteroidAlmanacInfoCard = ({ date }) => {
   return (
     <AsteroidCard elevation={5}>
       <LinearGradient
